@@ -144,6 +144,29 @@ The frozen `SYSTEM_PROMPT` lives exclusively in the system block with `cache_con
 - **No silent failures**: every error path routes to heuristic with a known confidence floor, never to an unhandled exception.
 - **Async batching**: `asyncio.gather` + `Semaphore(5)` gives ~5× throughput on batch endpoints.
 
+## Trade-offs & Limitations
+
+**LLM latency is variable and high on cold starts.**
+Cache-hit requests run in ~400–600ms. A cold start (first request after the 5-minute prompt-cache TTL expires) takes 5–10s. The 2s default timeout in `.env.example` is intentionally aggressive for production — raise `LLM_TIMEOUT_MS` to 10000–15000 for local use. This trade-off was discovered during testing: 3 retries × 2s = 6s worst-case before heuristic fallback kicks in.
+
+**Heuristic fallback sacrifices accuracy for reliability.**
+The 8 regex rules always return `confidence ≤ 0.40` and cover only the obvious patterns. A `ModuleNotFoundError` buried inside a wrapped exception won't match. This is intentional — a low-confidence answer is always better than an unhandled exception — but it means ~5–15% of real-world failures will get a coarse classification.
+
+**The confidence threshold (0.65) is a fixed heuristic, not learned.**
+The cutoff between "trust the LLM" and "fall back to heuristics" was chosen empirically. It has not been calibrated against a held-out validation set. A project with more labeled data should tune this with a proper precision-recall curve.
+
+**SQLite limits horizontal scalability.**
+`aiosqlite` is single-writer. Concurrent writes from multiple uvicorn workers will serialize. For multi-worker deployments, swap the storage layer for PostgreSQL (the `store_result` interface is the only surface that needs to change).
+
+**The eval job store is in-memory.**
+`routes/evaluate.py` uses a plain Python dict (`_jobs`) to track background eval jobs. Restarting the server loses all job state. Acceptable for a dev/eval tool; not acceptable in production. A Redis-backed job queue (Celery, ARQ) would be the next step.
+
+**The eval dataset is programmatically generated, not hand-labeled.**
+`data/eval_dataset/labeled_failures.json` was produced by `scripts/generate_eval_dataset.py` from templates, not from real CI failures. This makes eval scores optimistic — the model is tested on clean, single-cause logs. Real pytest output is messier (wrapped exceptions, multi-cause failures, framework noise). The generator is the right starting point; replacing it with real labeled failures is the highest-value improvement.
+
+**`StoredRecord.db_path` uses a private aiosqlite API.**
+Extracting the database path requires reading a closure variable from `db._connector`. This is fragile across aiosqlite versions and will silently return `""` if the internal layout changes. A cleaner solution would pass `db_path` explicitly at construction time.
+
 ## Tech Stack
 
 Python 3.11+, `anthropic` SDK, FastAPI, Pydantic v2, aiosqlite, pytest, respx, ruff, mypy
