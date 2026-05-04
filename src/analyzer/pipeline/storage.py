@@ -31,6 +31,27 @@ CREATE INDEX IF NOT EXISTS idx_stored_at ON analysis_results(stored_at_utc DESC)
 """
 
 
+def _get_db_path(db: aiosqlite.Connection) -> str:
+    """Extract the database file path from an aiosqlite Connection.
+
+    aiosqlite stores the path in the connector closure — no public API exists.
+    Falls back to empty string if the internal layout changes.
+    """
+    try:
+        # Try the legacy attribute first (aiosqlite < 0.18)
+        return str(db._connector._filename)  # type: ignore[attr-defined]
+    except AttributeError:
+        pass
+    try:
+        # aiosqlite >= 0.18: path is a free variable in the connector closure
+        freevars = db._connector.__code__.co_freevars  # type: ignore[attr-defined]
+        idx = freevars.index("database")
+        cell = db._connector.__closure__[idx]  # type: ignore[attr-defined]
+        return str(cell.cell_contents)
+    except (AttributeError, ValueError, IndexError, TypeError):
+        return ""
+
+
 async def init_db(db: aiosqlite.Connection) -> None:
     await db.execute(_CREATE_TABLE)
     await db.execute(_CREATE_INDEX_CATEGORY)
@@ -70,7 +91,7 @@ async def store_result(
         record_id=record_id,
         scored_result=result,
         stored_at_utc=now,
-        db_path=str(db._connector._filename),  # type: ignore[attr-defined]
+        db_path=_get_db_path(db),
     )
 
 

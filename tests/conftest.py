@@ -177,21 +177,25 @@ def test_app(
     mock_llm_client: LLMClient,
     tmp_path: Any,
 ) -> Generator[TestClient, None, None]:
-    """Sync TestClient with mock LLMClient injected into app state."""
+    """Sync TestClient with mock LLMClient injected into app state.
+
+    TestClient DOES fire lifespan, so we override the lifespan context to inject
+    our test db and mock LLM client.
+    """
+    from contextlib import asynccontextmanager
+
     app = create_app()
 
-    async def _override_lifespan(app: Any) -> AsyncGenerator[None, None]:
+    @asynccontextmanager
+    async def _test_lifespan(a: Any) -> AsyncGenerator[None, None]:
         db = await aiosqlite.connect(settings_override.db_path)
         await init_db(db)
-        app.state.db = db
-        app.state.llm = mock_llm_client
+        a.state.db = db
+        a.state.llm = mock_llm_client
         yield
         await db.close()
 
-    # Patch the lifespan for this test
-    from contextlib import asynccontextmanager
-
-    app.router.lifespan_context = asynccontextmanager(_override_lifespan)
+    app.router.lifespan_context = _test_lifespan
 
     with TestClient(app, raise_server_exceptions=True) as client:
         yield client
@@ -201,22 +205,21 @@ def test_app(
 async def async_test_client(
     settings_override: Settings,
     mock_llm_client: LLMClient,
+    tmp_path: Any,
 ) -> AsyncGenerator[AsyncClient, None]:
-    """Async HTTPX client with mock LLMClient — for async integration tests."""
+    """Async HTTPX client with mock LLMClient — for async integration tests.
+
+    ASGITransport does not fire lifespan events, so we set app.state directly.
+    """
+    db = await aiosqlite.connect(settings_override.db_path)
+    await init_db(db)
+
     app = create_app()
-
-    async def _override_lifespan(app: Any) -> AsyncGenerator[None, None]:
-        db = await aiosqlite.connect(settings_override.db_path)
-        await init_db(db)
-        app.state.db = db
-        app.state.llm = mock_llm_client
-        yield
-        await db.close()
-
-    from contextlib import asynccontextmanager
-
-    app.router.lifespan_context = asynccontextmanager(_override_lifespan)
+    app.state.db = db
+    app.state.llm = mock_llm_client
 
     transport = ASGITransport(app=app)
     async with AsyncClient(transport=transport, base_url="http://test") as client:
         yield client
+
+    await db.close()

@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import json
 from collections.abc import AsyncGenerator
 from typing import Any
 from unittest.mock import AsyncMock, MagicMock
@@ -35,25 +34,23 @@ def _llm_client_for(hypothesis: RootCauseHypothesis) -> LLMClient:
 
 @pytest_asyncio.fixture
 async def api_client(tmp_path: Any) -> AsyncGenerator[AsyncClient, None]:
-    """Async HTTP client backed by the FastAPI app with a mock LLM."""
+    """Async HTTP client backed by the FastAPI app with a mock LLM.
+
+    ASGITransport does not fire lifespan events, so we set app.state directly.
+    """
     db_path = str(tmp_path / "test.db")
+    db = await aiosqlite.connect(db_path)
+    await init_db(db)
+
     app = create_app()
-
-    async def _lifespan(app: Any) -> AsyncGenerator[None, None]:
-        db = await aiosqlite.connect(db_path)
-        await init_db(db)
-        app.state.db = db
-        app.state.llm = _llm_client_for(LLM_ASSERTION)
-        yield
-        await db.close()
-
-    from contextlib import asynccontextmanager
-
-    app.router.lifespan_context = asynccontextmanager(_lifespan)
+    app.state.db = db
+    app.state.llm = _llm_client_for(LLM_ASSERTION)
 
     transport = ASGITransport(app=app)
     async with AsyncClient(transport=transport, base_url="http://test") as client:
         yield client
+
+    await db.close()
 
 
 # ---------------------------------------------------------------------------
@@ -230,35 +227,28 @@ async def api_client_rate_limited(tmp_path: Any) -> AsyncGenerator[AsyncClient, 
     import anthropic
 
     db_path = str(tmp_path / "test_rl.db")
-    app = create_app()
+    db = await aiosqlite.connect(db_path)
+    await init_db(db)
 
-    def _rate_limit_client() -> LLMClient:
-        client = MagicMock(spec=LLMClient)
-        client._model = "claude-sonnet-4-6"
-        client.classify_failure = AsyncMock(
-            side_effect=anthropic.RateLimitError(
-                message="rate limited",
-                response=MagicMock(status_code=429, headers={}),
-                body={},
-            )
+    rl_client = MagicMock(spec=LLMClient)
+    rl_client._model = "claude-sonnet-4-6"
+    rl_client.classify_failure = AsyncMock(
+        side_effect=anthropic.RateLimitError(
+            message="rate limited",
+            response=MagicMock(status_code=429, headers={}),
+            body={},
         )
-        return client
+    )
 
-    async def _lifespan(app: Any) -> AsyncGenerator[None, None]:
-        db = await aiosqlite.connect(db_path)
-        await init_db(db)
-        app.state.db = db
-        app.state.llm = _rate_limit_client()
-        yield
-        await db.close()
-
-    from contextlib import asynccontextmanager
-
-    app.router.lifespan_context = asynccontextmanager(_lifespan)
+    app = create_app()
+    app.state.db = db
+    app.state.llm = rl_client
 
     transport = ASGITransport(app=app)
     async with AsyncClient(transport=transport, base_url="http://test") as client:
         yield client
+
+    await db.close()
 
 
 @pytest.mark.asyncio

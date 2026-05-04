@@ -7,7 +7,11 @@
       "Bash(git --version)",
       "Bash(pip --version)",
       "Skill(claude-api)",
-      "Skill(claude-api:*)"
+      "Skill(claude-api:*)",
+      "Bash(\"C:\\\\Users\\\\Aditya\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python311\\\\python.exe\" -c \"import setuptools; print\\(setuptools.__version__\\)\")",
+      "Bash(\"C:\\\\Users\\\\Aditya\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python311\\\\python.exe\" -m pip install \"setuptools>=68\" -q)",
+      "Bash(\"C:\\\\Users\\\\Aditya\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python311\\\\python.exe\" -m pip install -e \".[dev]\" -q)",
+      "Bash(\"C:\\\\Users\\\\Aditya\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python311\\\\python.exe\" -c \"import setuptools; print\\(setuptools.__version__\\); import setuptools.backends; print\\('backends ok'\\)\")"
     ]
   }
 }
