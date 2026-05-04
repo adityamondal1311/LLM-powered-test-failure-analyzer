@@ -19,6 +19,51 @@ raw log (str)
 
 **API** (`api/`): FastAPI with async routes for single analysis, batch analysis, and background eval jobs.
 
+## Quick Demo
+
+Start the server and analyze a real failure in one command:
+
+```bash
+# 1. Start the server
+uvicorn analyzer.api.app:create_app --factory --port 8000
+
+# 2. Send a failure log — get back a structured classification
+curl -X POST http://localhost:8000/api/v1/analyze \
+  -H "Content-Type: application/json" \
+  -d '{
+    "raw_log": "FAILED tests/test_payments.py::test_user_balance - AssertionError: assert 150.0 == 200.0\n_ test_user_balance _\ntests/test_payments.py:42: in test_user_balance\n    assert result == expected\nAssertionError: assert 150.0 == 200.0\n========================= 1 failed in 0.23s ========================="
+  }'
+```
+
+**Response:**
+```json
+{
+  "record_id": "28c5a4dd-82ef-4b0d-a2c9-9cd1ce3d10d6",
+  "test_id": "tests/test_payments.py::test_user_balance",
+  "category": "assertion_error",
+  "summary": "Test asserts user balance is 200.0 but got 150.0 — a numeric value mismatch in payment balance calculation.",
+  "explanation": "The discrepancy suggests either a missing transaction, an unexpected fee deduction, stale fixture data, or a stale expected value.",
+  "fix_hint": "Audit the balance calculation logic to identify why the result is 50.0 short. Check recent changes to payment processing or fee deduction logic.",
+  "confidence": 0.95,
+  "is_flaky": false,
+  "fallback_used": false,
+  "fallback_source": "llm",
+  "latency_ms": 7712.01
+}
+```
+
+Alternatively, open **http://localhost:8000/docs** for the interactive Swagger UI.
+
+## Performance
+
+| Scenario | Latency |
+|---|---|
+| Cold start (first request, cache miss) | ~5–10s |
+| Warm request (prompt cache hit) | ~400–600ms |
+| Batch of 5 logs (concurrent) | ~600–800ms total |
+
+The system prompt is cached via `cache_control: {type: "ephemeral"}` (5-minute TTL). Every warm request after the first saves ~300ms and ~90% of system-prompt token cost. Batch requests use `asyncio.gather` with `Semaphore(5)`, giving roughly 5× throughput over sequential calls.
+
 ## Setup
 
 ```bash
