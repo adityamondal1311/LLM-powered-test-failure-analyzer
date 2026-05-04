@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"g:\\\\LLM powered test failure analyzer\" -Recurse -Force)",
+      "Bash(Sort-Object FullName)",
+      "Bash(Format-Table -AutoSize -Property FullName, PSIsContainer)",
+      "Bash(git --version)",
+      "Bash(pip --version)",
+      "Skill(claude-api)",
+      "Skill(claude-api:*)"
+    ]
+  }
+}

@@ -1,0 +1,1607 @@
+{
+  "version": "1.0",
+  "description": "Auto-generated labeled pytest failure cases for eval pipeline. 200 cases across 9 categories with easy/medium/hard difficulty split.",
+  "created": "2026-05-04",
+  "cases": [
+    {
+      "id": "tc_067",
+      "raw_log": "FAILED tests/test_import_error_067.py::test_import_error_case_67 - ModuleNotFoundError: No module named 'boto3'\n============================= FAILURES ==============================\n_________________________ test_import_error_case_67 _________________________\ntests/test_import_error_067.py:37: in test_import_error_case_67\n    ModuleNotFoundError: No module named 'boto3'\n========================= 1 failed in 0.72s =========================",
+      "ground_truth_category": "import_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated import_error variant 17"
+    },
+    {
+      "id": "tc_188",
+      "raw_log": "FAILED tests/test_unknown_188.py::test_unknown_case_188 - RecursionError: maximum recursion depth exceeded\n============================= FAILURES ==============================\n_________________________ test_unknown_case_188 _________________________\ntests/test_unknown_188.py:38: in test_unknown_case_188\n    RecursionError: maximum recursion depth exceeded\n========================= 1 failed in 1.93s =========================",
+      "ground_truth_category": "unknown",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated unknown variant 8"
+    },
+    {
+      "id": "tc_102",
+      "raw_log": "FAILED tests/test_timeout_102.py::test_timeout_case_102 - TimeoutError: test timed out after 30s\n============================= FAILURES ==============================\n_________________________ test_timeout_case_102 _________________________\ntests/test_timeout_102.py:32: in test_timeout_case_102\n    TimeoutError: test timed out after 30s\n========================= 1 failed in 1.07s =========================",
+      "ground_truth_category": "timeout",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated timeout variant 12"
+    },
+    {
+      "id": "tc_194",
+      "raw_log": "FAILED tests/test_unknown_194.py::test_unknown_case_194 - OverflowError: Python int too large to convert to C long\n============================= FAILURES ==============================\n_________________________ test_unknown_case_194 _________________________\ntests/test_unknown_194.py:44: in test_unknown_case_194\n    OverflowError: Python int too large\n========================= 1 failed in 1.99s =========================",
+      "ground_truth_category": "unknown",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated unknown variant 14"
+    },
+    {
+      "id": "tc_112",
+      "raw_log": "FAILED tests/test_environment_error_112.py::test_environment_error_case_112 - KeyError: 'SECRET_KEY'\n============================= FAILURES ==============================\n_________________________ test_environment_error_case_112 _________________________\ntests/test_environment_error_112.py:42: in test_environment_error_case_112\n    KeyError: 'SECRET_KEY'\nenv var SECRET_KEY not set\n========================= 1 failed in 1.17s =========================",
+      "ground_truth_category": "environment_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated environment_error variant 7"
+    },
+    {
+      "id": "tc_122",
+      "raw_log": "FAILED tests/test_environment_error_122.py::test_environment_error_case_122 - EnvironmentError: missing required env var: STRIPE_KEY\n============================= FAILURES ==============================\n_________________________ test_environment_error_case_122 _________________________\ntests/test_environment_error_122.py:12: in test_environment_error_case_122\n    EnvironmentError: missing required env var STRIPE_KEY\n========================= 1 failed in 1.27s =========================",
+      "ground_truth_category": "environment_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated environment_error variant 17"
+    },
+    {
+      "id": "tc_014",
+      "raw_log": "FAILED tests/test_assertion_error_014.py::test_assertion_error_case_14 - AssertionError: assert user.is_active is True\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_14 _________________________\ntests/test_assertion_error_014.py:24: in test_assertion_error_case_14\n    assert user.is_active is True\nE   AssertionError: assert False is True\n========================= 1 failed in 0.19s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated assertion_error variant 14"
+    },
+    {
+      "id": "tc_003",
+      "raw_log": "FAILED tests/test_assertion_error_003.py::test_assertion_error_case_3 - AssertionError: assert len(items) == {n}\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_3 _________________________\ntests/test_assertion_error_003.py:13: in test_assertion_error_case_3\n    assert len(items) == 4\nE   AssertionError: assert 0 == 4\n========================= 1 failed in 0.08s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated assertion_error variant 3"
+    },
+    {
+      "id": "tc_065",
+      "raw_log": "FAILED tests/test_import_error_065.py::test_import_error_case_65 - ModuleNotFoundError: No module named 'redis'\n============================= FAILURES ==============================\n_________________________ test_import_error_case_65 _________________________\ntests/test_import_error_065.py:35: in test_import_error_case_65\n    ModuleNotFoundError: No module named 'redis'\n========================= 1 failed in 0.70s =========================",
+      "ground_truth_category": "import_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated import_error variant 15"
+    },
+    {
+      "id": "tc_045",
+      "raw_log": "FAILED tests/test_assertion_error_045.py::test_assertion_error_case_45 - AssertionError: assert result['status'] == 'ok'\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_45 _________________________\ntests/test_assertion_error_045.py:15: in test_assertion_error_case_45\n    assert result['status'] == 'ok'\nE   AssertionError: assert 'error' == 'ok'\n========================= 1 failed in 0.50s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated assertion_error variant 45"
+    },
+    {
+      "id": "tc_137",
+      "raw_log": "FAILED tests/test_network_error_137.py::test_network_error_case_137 - ConnectionResetError: [Errno 104] Connection reset by peer\n============================= FAILURES ==============================\n_________________________ test_network_error_case_137 _________________________\ntests/test_network_error_137.py:27: in test_network_error_case_137\n    ConnectionResetError: [Errno 104]\n========================= 1 failed in 1.42s =========================",
+      "ground_truth_category": "network_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated network_error variant 7"
+    },
+    {
+      "id": "tc_171",
+      "raw_log": "FAILED tests/test_flaky_171.py::test_flaky_case_171 - AssertionError: assert count == 100 (flaky: race condition)\n============================= FAILURES ==============================\n_________________________ test_flaky_case_171 _________________________\ntests/test_flaky_171.py:21: in test_flaky_case_171\n    assert count == 100\nE   AssertionError: assert 99 == 100\n# known flaky due to race condition\n========================= 1 failed in 1.76s =========================",
+      "ground_truth_category": "flaky",
+      "ground_truth_is_flaky": true,
+      "difficulty": "medium",
+      "notes": "Auto-generated flaky variant 6"
+    },
+    {
+      "id": "tc_129",
+      "raw_log": "FAILED tests/test_environment_error_129.py::test_environment_error_case_129 - RuntimeError: Python 3.9 required, got 3.8\n============================= FAILURES ==============================\n_________________________ test_environment_error_case_129 _________________________\ntests/test_environment_error_129.py:19: in test_environment_error_case_129\n    RuntimeError: Python 3.9 required\nos.environ check\n========================= 1 failed in 1.34s =========================",
+      "ground_truth_category": "environment_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated environment_error variant 24"
+    },
+    {
+      "id": "tc_077",
+      "raw_log": "FAILED tests/test_fixture_error_077.py::test_fixture_error_case_77 - FixtureError: ScopeMismatch: function-scoped fixture in session scope\n============================= FAILURES ==============================\n_________________________ test_fixture_error_case_77 _________________________\ntests/test_fixture_error_077.py:47: in test_fixture_error_case_77\n    fixture scope error failed\nScopeMismatch: function-scoped 'db'\n========================= 1 failed in 0.82s =========================",
+      "ground_truth_category": "fixture_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated fixture_error variant 7"
+    },
+    {
+      "id": "tc_159",
+      "raw_log": "FAILED tests/test_data_error_159.py::test_data_error_case_159 - ValueError: schema mismatch: expected 'id' field missing\n============================= FAILURES ==============================\n_________________________ test_data_error_case_159 _________________________\ntests/test_data_error_159.py:49: in test_data_error_case_159\n    ValueError: schema mismatch\nexpected 'id' field missing\n========================= 1 failed in 1.64s =========================",
+      "ground_truth_category": "data_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated data_error variant 9"
+    },
+    {
+      "id": "tc_168",
+      "raw_log": "FAILED tests/test_flaky_168.py::test_flaky_case_168 - AssertionError: timing-dependent assertion failed\n============================= FAILURES ==============================\n_________________________ test_flaky_case_168 _________________________\ntests/test_flaky_168.py:18: in test_flaky_case_168\n    assert elapsed < 1.0\nE   AssertionError: flaky timing\n========================= 1 failed in 1.73s =========================",
+      "ground_truth_category": "flaky",
+      "ground_truth_is_flaky": true,
+      "difficulty": "easy",
+      "notes": "Auto-generated flaky variant 3"
+    },
+    {
+      "id": "tc_046",
+      "raw_log": "FAILED tests/test_assertion_error_046.py::test_assertion_error_case_46 - AssertionError: assert price > 0\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_46 _________________________\ntests/test_assertion_error_046.py:16: in test_assertion_error_case_46\n    assert price > 0\nE   AssertionError: assert -1 > 0\n========================= 1 failed in 0.51s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated assertion_error variant 46"
+    },
+    {
+      "id": "tc_131",
+      "raw_log": "FAILED tests/test_network_error_131.py::test_network_error_case_131 - ConnectionError: Max retries exceeded with url: /api/v1/status\n============================= FAILURES ==============================\n_________________________ test_network_error_case_131 _________________________\ntests/test_network_error_131.py:21: in test_network_error_case_131\n    ConnectionError: HTTPSConnectionPool\nMax retries exceeded\n========================= 1 failed in 1.36s =========================",
+      "ground_truth_category": "network_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated network_error variant 1"
+    },
+    {
+      "id": "tc_031",
+      "raw_log": "FAILED tests/test_assertion_error_031.py::test_assertion_error_case_31 - AssertionError: assert {a} == {b}\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_31 _________________________\ntests/test_assertion_error_031.py:41: in test_assertion_error_case_31\n    assert result == expected\nE   AssertionError: assert 93 == 94\n========================= 1 failed in 0.36s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated assertion_error variant 31"
+    },
+    {
+      "id": "tc_004",
+      "raw_log": "FAILED tests/test_assertion_error_004.py::test_assertion_error_case_4 - AssertionError: assert user.is_active is True\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_4 _________________________\ntests/test_assertion_error_004.py:14: in test_assertion_error_case_4\n    assert user.is_active is True\nE   AssertionError: assert False is True\n========================= 1 failed in 0.09s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated assertion_error variant 4"
+    },
+    {
+      "id": "tc_160",
+      "raw_log": "FAILED tests/test_data_error_160.py::test_data_error_case_160 - json.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n============================= FAILURES ==============================\n_________________________ test_data_error_case_160 _________________________\ntests/test_data_error_160.py:10: in test_data_error_case_160\n    json.JSONDecodeError: Expecting value\n========================= 1 failed in 1.65s =========================",
+      "ground_truth_category": "data_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated data_error variant 10"
+    },
+    {
+      "id": "tc_016",
+      "raw_log": "FAILED tests/test_assertion_error_016.py::test_assertion_error_case_16 - AssertionError: assert price > 0\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_16 _________________________\ntests/test_assertion_error_016.py:26: in test_assertion_error_case_16\n    assert price > 0\nE   AssertionError: assert -1 > 0\n========================= 1 failed in 0.21s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated assertion_error variant 16"
+    },
+    {
+      "id": "tc_043",
+      "raw_log": "FAILED tests/test_assertion_error_043.py::test_assertion_error_case_43 - AssertionError: assert len(items) == {n}\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_43 _________________________\ntests/test_assertion_error_043.py:13: in test_assertion_error_case_43\n    assert len(items) == 44\nE   AssertionError: assert 0 == 44\n========================= 1 failed in 0.48s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated assertion_error variant 43"
+    },
+    {
+      "id": "tc_127",
+      "raw_log": "FAILED tests/test_environment_error_127.py::test_environment_error_case_127 - KeyError: 'AWS_SECRET_ACCESS_KEY'\n============================= FAILURES ==============================\n_________________________ test_environment_error_case_127 _________________________\ntests/test_environment_error_127.py:17: in test_environment_error_case_127\n    KeyError: 'AWS_SECRET_ACCESS_KEY'\nos.environ['AWS_SECRET_ACCESS_KEY']\n========================= 1 failed in 1.32s =========================",
+      "ground_truth_category": "environment_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated environment_error variant 22"
+    },
+    {
+      "id": "tc_187",
+      "raw_log": "FAILED tests/test_unknown_187.py::test_unknown_case_187 - OverflowError: Python int too large to convert to C long\n============================= FAILURES ==============================\n_________________________ test_unknown_case_187 _________________________\ntests/test_unknown_187.py:37: in test_unknown_case_187\n    OverflowError: Python int too large\n========================= 1 failed in 1.92s =========================",
+      "ground_truth_category": "unknown",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated unknown variant 7"
+    },
+    {
+      "id": "tc_163",
+      "raw_log": "FAILED tests/test_data_error_163.py::test_data_error_case_163 - FileNotFoundError: [Errno 2] No such file or directory: 'data/test_input.csv'\n============================= FAILURES ==============================\n_________________________ test_data_error_case_163 _________________________\ntests/test_data_error_163.py:13: in test_data_error_case_163\n    FileNotFoundError: No such file or directory: 'data/test_input.csv'\n========================= 1 failed in 1.68s =========================",
+      "ground_truth_category": "data_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated data_error variant 13"
+    },
+    {
+      "id": "tc_048",
+      "raw_log": "FAILED tests/test_assertion_error_048.py::test_assertion_error_case_48 - AssertionError: assert db_record is not None\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_48 _________________________\ntests/test_assertion_error_048.py:18: in test_assertion_error_case_48\n    assert db_record is not None\nE   AssertionError\n========================= 1 failed in 0.53s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated assertion_error variant 48"
+    },
+    {
+      "id": "tc_111",
+      "raw_log": "FAILED tests/test_environment_error_111.py::test_environment_error_case_111 - RuntimeError: Python 3.9 required, got 3.8\n============================= FAILURES ==============================\n_________________________ test_environment_error_case_111 _________________________\ntests/test_environment_error_111.py:41: in test_environment_error_case_111\n    RuntimeError: Python 3.9 required\nos.environ check\n========================= 1 failed in 1.16s =========================",
+      "ground_truth_category": "environment_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated environment_error variant 6"
+    },
+    {
+      "id": "tc_006",
+      "raw_log": "FAILED tests/test_assertion_error_006.py::test_assertion_error_case_6 - AssertionError: assert price > 0\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_6 _________________________\ntests/test_assertion_error_006.py:16: in test_assertion_error_case_6\n    assert price > 0\nE   AssertionError: assert -1 > 0\n========================= 1 failed in 0.11s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated assertion_error variant 6"
+    },
+    {
+      "id": "tc_195",
+      "raw_log": "FAILED tests/test_unknown_195.py::test_unknown_case_195 - RecursionError: maximum recursion depth exceeded\n============================= FAILURES ==============================\n_________________________ test_unknown_case_195 _________________________\ntests/test_unknown_195.py:45: in test_unknown_case_195\n    RecursionError: maximum recursion depth exceeded\n========================= 1 failed in 2.00s =========================",
+      "ground_truth_category": "unknown",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated unknown variant 15"
+    },
+    {
+      "id": "tc_038",
+      "raw_log": "FAILED tests/test_assertion_error_038.py::test_assertion_error_case_38 - AssertionError: assert db_record is not None\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_38 _________________________\ntests/test_assertion_error_038.py:48: in test_assertion_error_case_38\n    assert db_record is not None\nE   AssertionError\n========================= 1 failed in 0.43s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated assertion_error variant 38"
+    },
+    {
+      "id": "tc_123",
+      "raw_log": "FAILED tests/test_environment_error_123.py::test_environment_error_case_123 - KeyError: 'POSTGRES_PASSWORD'\n============================= FAILURES ==============================\n_________________________ test_environment_error_case_123 _________________________\ntests/test_environment_error_123.py:13: in test_environment_error_case_123\n    KeyError: 'POSTGRES_PASSWORD'\nenv var access\n========================= 1 failed in 1.28s =========================",
+      "ground_truth_category": "environment_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated environment_error variant 18"
+    },
+    {
+      "id": "tc_013",
+      "raw_log": "FAILED tests/test_assertion_error_013.py::test_assertion_error_case_13 - AssertionError: assert len(items) == {n}\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_13 _________________________\ntests/test_assertion_error_013.py:23: in test_assertion_error_case_13\n    assert len(items) == 14\nE   AssertionError: assert 0 == 14\n========================= 1 failed in 0.18s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated assertion_error variant 13"
+    },
+    {
+      "id": "tc_037",
+      "raw_log": "FAILED tests/test_assertion_error_037.py::test_assertion_error_case_37 - AssertionError: assert output.startswith('Hello')\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_37 _________________________\ntests/test_assertion_error_037.py:47: in test_assertion_error_case_37\n    assert output.startswith('Hello')\nE   AssertionError: assert False\n========================= 1 failed in 0.42s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated assertion_error variant 37"
+    },
+    {
+      "id": "tc_154",
+      "raw_log": "FAILED tests/test_data_error_154.py::test_data_error_case_154 - json.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n============================= FAILURES ==============================\n_________________________ test_data_error_case_154 _________________________\ntests/test_data_error_154.py:44: in test_data_error_case_154\n    json.JSONDecodeError: Expecting value\n========================= 1 failed in 1.59s =========================",
+      "ground_truth_category": "data_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated data_error variant 4"
+    },
+    {
+      "id": "tc_070",
+      "raw_log": "FAILED tests/test_import_error_070.py::test_import_error_case_70 - ImportError: cannot import name 'field_validator' from 'pydantic'\n============================= FAILURES ==============================\n_________________________ test_import_error_case_70 _________________________\ntests/test_import_error_070.py:40: in test_import_error_case_70\n    ImportError: cannot import name 'field_validator'\n========================= 1 failed in 0.75s =========================",
+      "ground_truth_category": "import_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated import_error variant 20"
+    },
+    {
+      "id": "tc_062",
+      "raw_log": "FAILED tests/test_import_error_062.py::test_import_error_case_62 - ModuleNotFoundError: No module named 'psycopg2'\n============================= FAILURES ==============================\n_________________________ test_import_error_case_62 _________________________\ntests/test_import_error_062.py:32: in test_import_error_case_62\n    ModuleNotFoundError: No module named 'psycopg2'\n========================= 1 failed in 0.67s =========================",
+      "ground_truth_category": "import_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated import_error variant 12"
+    },
+    {
+      "id": "tc_196",
+      "raw_log": "FAILED tests/test_unknown_196.py::test_unknown_case_196 - MemoryError: \n============================= FAILURES ==============================\n_________________________ test_unknown_case_196 _________________________\ntests/test_unknown_196.py:46: in test_unknown_case_196\n    MemoryError\nfailed to allocate memory\n========================= 1 failed in 2.01s =========================",
+      "ground_truth_category": "unknown",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated unknown variant 16"
+    },
+    {
+      "id": "tc_033",
+      "raw_log": "FAILED tests/test_assertion_error_033.py::test_assertion_error_case_33 - AssertionError: assert len(items) == {n}\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_33 _________________________\ntests/test_assertion_error_033.py:43: in test_assertion_error_case_33\n    assert len(items) == 34\nE   AssertionError: assert 0 == 34\n========================= 1 failed in 0.38s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated assertion_error variant 33"
+    },
+    {
+      "id": "tc_173",
+      "raw_log": "FAILED tests/test_flaky_173.py::test_flaky_case_173 - AssertionError: timing-dependent assertion failed\n============================= FAILURES ==============================\n_________________________ test_flaky_case_173 _________________________\ntests/test_flaky_173.py:23: in test_flaky_case_173\n    assert elapsed < 1.0\nE   AssertionError: flaky timing\n========================= 1 failed in 1.78s =========================",
+      "ground_truth_category": "flaky",
+      "ground_truth_is_flaky": true,
+      "difficulty": "medium",
+      "notes": "Auto-generated flaky variant 8"
+    },
+    {
+      "id": "tc_172",
+      "raw_log": "FAILED tests/test_flaky_172.py::test_flaky_case_172 - AssertionError: assert result is non-deterministic\n============================= FAILURES ==============================\n_________________________ test_flaky_case_172 _________________________\ntests/test_flaky_172.py:22: in test_flaky_case_172\n    assert result == expected\nE   AssertionError\n# non-deterministic test output\n========================= 1 failed in 1.77s =========================",
+      "ground_truth_category": "flaky",
+      "ground_truth_is_flaky": true,
+      "difficulty": "medium",
+      "notes": "Auto-generated flaky variant 7"
+    },
+    {
+      "id": "tc_061",
+      "raw_log": "FAILED tests/test_import_error_061.py::test_import_error_case_61 - ImportError: cannot import name 'AsyncClient' from 'httpx'\n============================= FAILURES ==============================\n_________________________ test_import_error_case_61 _________________________\ntests/test_import_error_061.py:31: in test_import_error_case_61\n    ImportError: cannot import name 'AsyncClient'\n========================= 1 failed in 0.66s =========================",
+      "ground_truth_category": "import_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated import_error variant 11"
+    },
+    {
+      "id": "tc_011",
+      "raw_log": "FAILED tests/test_assertion_error_011.py::test_assertion_error_case_11 - AssertionError: assert {a} == {b}\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_11 _________________________\ntests/test_assertion_error_011.py:21: in test_assertion_error_case_11\n    assert result == expected\nE   AssertionError: assert 33 == 34\n========================= 1 failed in 0.16s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated assertion_error variant 11"
+    },
+    {
+      "id": "tc_145",
+      "raw_log": "FAILED tests/test_network_error_145.py::test_network_error_case_145 - ConnectionError: Max retries exceeded with url: /api/v1/status\n============================= FAILURES ==============================\n_________________________ test_network_error_case_145 _________________________\ntests/test_network_error_145.py:35: in test_network_error_case_145\n    ConnectionError: HTTPSConnectionPool\nMax retries exceeded\n========================= 1 failed in 1.50s =========================",
+      "ground_truth_category": "network_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated network_error variant 15"
+    },
+    {
+      "id": "tc_161",
+      "raw_log": "FAILED tests/test_data_error_161.py::test_data_error_case_161 - KeyError: 'user_id' not in response payload\n============================= FAILURES ==============================\n_________________________ test_data_error_case_161 _________________________\ntests/test_data_error_161.py:11: in test_data_error_case_161\n    KeyError: 'user_id'\nschema mismatch\n========================= 1 failed in 1.66s =========================",
+      "ground_truth_category": "data_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated data_error variant 11"
+    },
+    {
+      "id": "tc_053",
+      "raw_log": "FAILED tests/test_import_error_053.py::test_import_error_case_53 - ModuleNotFoundError: No module named 'boto3'\n============================= FAILURES ==============================\n_________________________ test_import_error_case_53 _________________________\ntests/test_import_error_053.py:23: in test_import_error_case_53\n    ModuleNotFoundError: No module named 'boto3'\n========================= 1 failed in 0.58s =========================",
+      "ground_truth_category": "import_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated import_error variant 3"
+    },
+    {
+      "id": "tc_126",
+      "raw_log": "FAILED tests/test_environment_error_126.py::test_environment_error_case_126 - KeyError: 'SMTP_HOST'\n============================= FAILURES ==============================\n_________________________ test_environment_error_case_126 _________________________\ntests/test_environment_error_126.py:16: in test_environment_error_case_126\n    KeyError: 'SMTP_HOST'\nos.environ access\n========================= 1 failed in 1.31s =========================",
+      "ground_truth_category": "environment_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated environment_error variant 21"
+    },
+    {
+      "id": "tc_107",
+      "raw_log": "FAILED tests/test_environment_error_107.py::test_environment_error_case_107 - KeyError: 'ANTHROPIC_API_KEY'\n============================= FAILURES ==============================\n_________________________ test_environment_error_case_107 _________________________\ntests/test_environment_error_107.py:37: in test_environment_error_case_107\n    KeyError: 'ANTHROPIC_API_KEY'\nenv var ANTHROPIC_API_KEY not set\n========================= 1 failed in 1.12s =========================",
+      "ground_truth_category": "environment_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated environment_error variant 2"
+    },
+    {
+      "id": "tc_074",
+      "raw_log": "FAILED tests/test_fixture_error_074.py::test_fixture_error_case_74 - FixtureError: fixture 'event_loop' not found\n============================= FAILURES ==============================\n_________________________ test_fixture_error_case_74 _________________________\ntests/test_fixture_error_074.py:44: in test_fixture_error_case_74\n    fixture 'event_loop' not found\nhint: use pytest-asyncio\n========================= 1 failed in 0.79s =========================",
+      "ground_truth_category": "fixture_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated fixture_error variant 4"
+    },
+    {
+      "id": "tc_114",
+      "raw_log": "FAILED tests/test_environment_error_114.py::test_environment_error_case_114 - KeyError: 'POSTGRES_PASSWORD'\n============================= FAILURES ==============================\n_________________________ test_environment_error_case_114 _________________________\ntests/test_environment_error_114.py:44: in test_environment_error_case_114\n    KeyError: 'POSTGRES_PASSWORD'\nenv var access\n========================= 1 failed in 1.19s =========================",
+      "ground_truth_category": "environment_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated environment_error variant 9"
+    },
+    {
+      "id": "tc_106",
+      "raw_log": "FAILED tests/test_environment_error_106.py::test_environment_error_case_106 - KeyError: 'DATABASE_URL'\n============================= FAILURES ==============================\n_________________________ test_environment_error_case_106 _________________________\ntests/test_environment_error_106.py:36: in test_environment_error_case_106\n    KeyError: 'DATABASE_URL'\nos.environ['DATABASE_URL']\n========================= 1 failed in 1.11s =========================",
+      "ground_truth_category": "environment_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated environment_error variant 1"
+    },
+    {
+      "id": "tc_096",
+      "raw_log": "FAILED tests/test_timeout_096.py::test_timeout_case_96 - TimeoutError: operation timed out after 5.0s\n============================= FAILURES ==============================\n_________________________ test_timeout_case_96 _________________________\ntests/test_timeout_096.py:26: in test_timeout_case_96\n    TimeoutError: operation timed out after 5.0s\n========================= 1 failed in 1.01s =========================",
+      "ground_truth_category": "timeout",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated timeout variant 6"
+    },
+    {
+      "id": "tc_104",
+      "raw_log": "FAILED tests/test_timeout_104.py::test_timeout_case_104 - socket.timeout: timed out\n============================= FAILURES ==============================\n_________________________ test_timeout_case_104 _________________________\ntests/test_timeout_104.py:34: in test_timeout_case_104\n    socket.timeout: timed out\nconn.recv(1024)\n========================= 1 failed in 1.09s =========================",
+      "ground_truth_category": "timeout",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated timeout variant 14"
+    },
+    {
+      "id": "tc_146",
+      "raw_log": "FAILED tests/test_network_error_146.py::test_network_error_case_146 - ConnectionRefusedError: [Errno 111] Connection refused\n============================= FAILURES ==============================\n_________________________ test_network_error_case_146 _________________________\ntests/test_network_error_146.py:36: in test_network_error_case_146\n    ConnectionRefusedError: [Errno 111] Connection refused\nport 5432\n========================= 1 failed in 1.51s =========================",
+      "ground_truth_category": "network_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated network_error variant 16"
+    },
+    {
+      "id": "tc_044",
+      "raw_log": "FAILED tests/test_assertion_error_044.py::test_assertion_error_case_44 - AssertionError: assert user.is_active is True\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_44 _________________________\ntests/test_assertion_error_044.py:14: in test_assertion_error_case_44\n    assert user.is_active is True\nE   AssertionError: assert False is True\n========================= 1 failed in 0.49s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated assertion_error variant 44"
+    },
+    {
+      "id": "tc_001",
+      "raw_log": "FAILED tests/test_assertion_error_001.py::test_assertion_error_case_1 - AssertionError: assert {a} == {b}\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_1 _________________________\ntests/test_assertion_error_001.py:11: in test_assertion_error_case_1\n    assert result == expected\nE   AssertionError: assert 3 == 4\n========================= 1 failed in 0.06s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated assertion_error variant 1"
+    },
+    {
+      "id": "tc_162",
+      "raw_log": "FAILED tests/test_data_error_162.py::test_data_error_case_162 - TypeError: expected str but got NoneType in test data\n============================= FAILURES ==============================\n_________________________ test_data_error_case_162 _________________________\ntests/test_data_error_162.py:12: in test_data_error_case_162\n    TypeError: expected str, got NoneType\nNo such file\n========================= 1 failed in 1.67s =========================",
+      "ground_truth_category": "data_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated data_error variant 12"
+    },
+    {
+      "id": "tc_193",
+      "raw_log": "FAILED tests/test_unknown_193.py::test_unknown_case_193 - RuntimeError: coroutine was never awaited\n============================= FAILURES ==============================\n_________________________ test_unknown_case_193 _________________________\ntests/test_unknown_193.py:43: in test_unknown_case_193\n    RuntimeError: coroutine 'foo' was never awaited\n========================= 1 failed in 1.98s =========================",
+      "ground_truth_category": "unknown",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated unknown variant 13"
+    },
+    {
+      "id": "tc_017",
+      "raw_log": "FAILED tests/test_assertion_error_017.py::test_assertion_error_case_17 - AssertionError: assert output.startswith('Hello')\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_17 _________________________\ntests/test_assertion_error_017.py:27: in test_assertion_error_case_17\n    assert output.startswith('Hello')\nE   AssertionError: assert False\n========================= 1 failed in 0.22s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated assertion_error variant 17"
+    },
+    {
+      "id": "tc_081",
+      "raw_log": "FAILED tests/test_fixture_error_081.py::test_fixture_error_case_81 - FixtureError: fixture 'event_loop' not found\n============================= FAILURES ==============================\n_________________________ test_fixture_error_case_81 _________________________\ntests/test_fixture_error_081.py:11: in test_fixture_error_case_81\n    fixture 'event_loop' not found\nhint: use pytest-asyncio\n========================= 1 failed in 0.86s =========================",
+      "ground_truth_category": "fixture_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated fixture_error variant 11"
+    },
+    {
+      "id": "tc_103",
+      "raw_log": "FAILED tests/test_timeout_103.py::test_timeout_case_103 - asyncio.TimeoutError: future timed out\n============================= FAILURES ==============================\n_________________________ test_timeout_case_103 _________________________\ntests/test_timeout_103.py:33: in test_timeout_case_103\n    asyncio.TimeoutError\nfuture: <Task pending>\n========================= 1 failed in 1.08s =========================",
+      "ground_truth_category": "timeout",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated timeout variant 13"
+    },
+    {
+      "id": "tc_039",
+      "raw_log": "FAILED tests/test_assertion_error_039.py::test_assertion_error_case_39 - AssertionError: assert sorted(a) == sorted(b)\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_39 _________________________\ntests/test_assertion_error_039.py:49: in test_assertion_error_case_39\n    assert sorted(a) == sorted(b)\nE   AssertionError: lists differ\n========================= 1 failed in 0.44s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated assertion_error variant 39"
+    },
+    {
+      "id": "tc_157",
+      "raw_log": "FAILED tests/test_data_error_157.py::test_data_error_case_157 - FileNotFoundError: [Errno 2] No such file or directory: 'data/test_input.csv'\n============================= FAILURES ==============================\n_________________________ test_data_error_case_157 _________________________\ntests/test_data_error_157.py:47: in test_data_error_case_157\n    FileNotFoundError: No such file or directory: 'data/test_input.csv'\n========================= 1 failed in 1.62s =========================",
+      "ground_truth_category": "data_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated data_error variant 7"
+    },
+    {
+      "id": "tc_177",
+      "raw_log": "FAILED tests/test_flaky_177.py::test_flaky_case_177 - AssertionError: assert result is non-deterministic\n============================= FAILURES ==============================\n_________________________ test_flaky_case_177 _________________________\ntests/test_flaky_177.py:27: in test_flaky_case_177\n    assert result == expected\nE   AssertionError\n# non-deterministic test output\n========================= 1 failed in 1.82s =========================",
+      "ground_truth_category": "flaky",
+      "ground_truth_is_flaky": true,
+      "difficulty": "hard",
+      "notes": "Auto-generated flaky variant 12"
+    },
+    {
+      "id": "tc_136",
+      "raw_log": "FAILED tests/test_network_error_136.py::test_network_error_case_136 - TimeoutError: HTTPSConnectionPool read timed out\n============================= FAILURES ==============================\n_________________________ test_network_error_case_136 _________________________\ntests/test_network_error_136.py:26: in test_network_error_case_136\n    ConnectionError: HTTPSConnectionPool\nRead timed out\n========================= 1 failed in 1.41s =========================",
+      "ground_truth_category": "network_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated network_error variant 6"
+    },
+    {
+      "id": "tc_079",
+      "raw_log": "FAILED tests/test_fixture_error_079.py::test_fixture_error_case_79 - FixtureError: fixture 'mock_s3' not found\n============================= FAILURES ==============================\n_________________________ test_fixture_error_case_79 _________________________\ntests/test_fixture_error_079.py:49: in test_fixture_error_case_79\n    fixture 'mock_s3' not found\navailable fixtures: tmp_path\n========================= 1 failed in 0.84s =========================",
+      "ground_truth_category": "fixture_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated fixture_error variant 9"
+    },
+    {
+      "id": "tc_116",
+      "raw_log": "FAILED tests/test_environment_error_116.py::test_environment_error_case_116 - KeyError: 'ANTHROPIC_API_KEY'\n============================= FAILURES ==============================\n_________________________ test_environment_error_case_116 _________________________\ntests/test_environment_error_116.py:46: in test_environment_error_case_116\n    KeyError: 'ANTHROPIC_API_KEY'\nenv var ANTHROPIC_API_KEY not set\n========================= 1 failed in 1.21s =========================",
+      "ground_truth_category": "environment_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated environment_error variant 11"
+    },
+    {
+      "id": "tc_020",
+      "raw_log": "FAILED tests/test_assertion_error_020.py::test_assertion_error_case_20 - AssertionError: assert mock.call_count == 1\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_20 _________________________\ntests/test_assertion_error_020.py:30: in test_assertion_error_case_20\n    assert mock.call_count == 1\nE   AssertionError: assert 0 == 1\n========================= 1 failed in 0.25s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated assertion_error variant 20"
+    },
+    {
+      "id": "tc_015",
+      "raw_log": "FAILED tests/test_assertion_error_015.py::test_assertion_error_case_15 - AssertionError: assert result['status'] == 'ok'\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_15 _________________________\ntests/test_assertion_error_015.py:25: in test_assertion_error_case_15\n    assert result['status'] == 'ok'\nE   AssertionError: assert 'error' == 'ok'\n========================= 1 failed in 0.20s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated assertion_error variant 15"
+    },
+    {
+      "id": "tc_178",
+      "raw_log": "FAILED tests/test_flaky_178.py::test_flaky_case_178 - AssertionError: timing-dependent assertion failed\n============================= FAILURES ==============================\n_________________________ test_flaky_case_178 _________________________\ntests/test_flaky_178.py:28: in test_flaky_case_178\n    assert elapsed < 1.0\nE   AssertionError: flaky timing\n========================= 1 failed in 1.83s =========================",
+      "ground_truth_category": "flaky",
+      "ground_truth_is_flaky": true,
+      "difficulty": "hard",
+      "notes": "Auto-generated flaky variant 13"
+    },
+    {
+      "id": "tc_147",
+      "raw_log": "FAILED tests/test_network_error_147.py::test_network_error_case_147 - SSLError: certificate verify failed: unable to get local issuer certificate\n============================= FAILURES ==============================\n_________________________ test_network_error_case_147 _________________________\ntests/test_network_error_147.py:37: in test_network_error_case_147\n    SSLError: certificate verify failed\n========================= 1 failed in 1.52s =========================",
+      "ground_truth_category": "network_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated network_error variant 17"
+    },
+    {
+      "id": "tc_180",
+      "raw_log": "FAILED tests/test_flaky_180.py::test_flaky_case_180 - RuntimeError: flaky: event loop already running\n============================= FAILURES ==============================\n_________________________ test_flaky_case_180 _________________________\ntests/test_flaky_180.py:30: in test_flaky_case_180\n    RuntimeError: This event loop is already running\nflaky test\n========================= 1 failed in 1.85s =========================",
+      "ground_truth_category": "flaky",
+      "ground_truth_is_flaky": true,
+      "difficulty": "hard",
+      "notes": "Auto-generated flaky variant 15"
+    },
+    {
+      "id": "tc_066",
+      "raw_log": "FAILED tests/test_import_error_066.py::test_import_error_case_66 - ModuleNotFoundError: No module named 'celery'\n============================= FAILURES ==============================\n_________________________ test_import_error_case_66 _________________________\ntests/test_import_error_066.py:36: in test_import_error_case_66\n    ModuleNotFoundError: No module named 'celery'\n========================= 1 failed in 0.71s =========================",
+      "ground_truth_category": "import_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated import_error variant 16"
+    },
+    {
+      "id": "tc_085",
+      "raw_log": "FAILED tests/test_fixture_error_085.py::test_fixture_error_case_85 - FixtureError: fixture 'db_session' not found\n============================= FAILURES ==============================\n_________________________ test_fixture_error_case_85 _________________________\ntests/test_fixture_error_085.py:15: in test_fixture_error_case_85\n    fixture 'db_session' not found\navailable fixtures: tmp_path, capsys\n========================= 1 failed in 0.90s =========================",
+      "ground_truth_category": "fixture_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated fixture_error variant 15"
+    },
+    {
+      "id": "tc_166",
+      "raw_log": "FAILED tests/test_flaky_166.py::test_flaky_case_166 - AssertionError: assert count == 100 (flaky: race condition)\n============================= FAILURES ==============================\n_________________________ test_flaky_case_166 _________________________\ntests/test_flaky_166.py:16: in test_flaky_case_166\n    assert count == 100\nE   AssertionError: assert 99 == 100\n# known flaky due to race condition\n========================= 1 failed in 1.71s =========================",
+      "ground_truth_category": "flaky",
+      "ground_truth_is_flaky": true,
+      "difficulty": "easy",
+      "notes": "Auto-generated flaky variant 1"
+    },
+    {
+      "id": "tc_047",
+      "raw_log": "FAILED tests/test_assertion_error_047.py::test_assertion_error_case_47 - AssertionError: assert output.startswith('Hello')\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_47 _________________________\ntests/test_assertion_error_047.py:17: in test_assertion_error_case_47\n    assert output.startswith('Hello')\nE   AssertionError: assert False\n========================= 1 failed in 0.52s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated assertion_error variant 47"
+    },
+    {
+      "id": "tc_105",
+      "raw_log": "FAILED tests/test_timeout_105.py::test_timeout_case_105 - TimeoutError: read timed out after 10s\n============================= FAILURES ==============================\n_________________________ test_timeout_case_105 _________________________\ntests/test_timeout_105.py:35: in test_timeout_case_105\n    TimeoutError: read timed out after 10s\n========================= 1 failed in 1.10s =========================",
+      "ground_truth_category": "timeout",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated timeout variant 15"
+    },
+    {
+      "id": "tc_080",
+      "raw_log": "FAILED tests/test_fixture_error_080.py::test_fixture_error_case_80 - FixtureError: fixture 'auth_client' not found\n============================= FAILURES ==============================\n_________________________ test_fixture_error_case_80 _________________________\ntests/test_fixture_error_080.py:10: in test_fixture_error_case_80\n    fixture 'auth_client' not found\n========================= 1 failed in 0.85s =========================",
+      "ground_truth_category": "fixture_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated fixture_error variant 10"
+    },
+    {
+      "id": "tc_055",
+      "raw_log": "FAILED tests/test_import_error_055.py::test_import_error_case_55 - ModuleNotFoundError: No module named 'psycopg2'\n============================= FAILURES ==============================\n_________________________ test_import_error_case_55 _________________________\ntests/test_import_error_055.py:25: in test_import_error_case_55\n    ModuleNotFoundError: No module named 'psycopg2'\n========================= 1 failed in 0.60s =========================",
+      "ground_truth_category": "import_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated import_error variant 5"
+    },
+    {
+      "id": "tc_197",
+      "raw_log": "FAILED tests/test_unknown_197.py::test_unknown_case_197 - SystemExit: 1\n============================= FAILURES ==============================\n_________________________ test_unknown_case_197 _________________________\ntests/test_unknown_197.py:47: in test_unknown_case_197\n    SystemExit: 1\n========================= 1 failed in 2.02s =========================",
+      "ground_truth_category": "unknown",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated unknown variant 17"
+    },
+    {
+      "id": "tc_086",
+      "raw_log": "FAILED tests/test_fixture_error_086.py::test_fixture_error_case_86 - FixtureError: fixture 'mock_s3' not found\n============================= FAILURES ==============================\n_________________________ test_fixture_error_case_86 _________________________\ntests/test_fixture_error_086.py:16: in test_fixture_error_case_86\n    fixture 'mock_s3' not found\navailable fixtures: tmp_path\n========================= 1 failed in 0.91s =========================",
+      "ground_truth_category": "fixture_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated fixture_error variant 16"
+    },
+    {
+      "id": "tc_119",
+      "raw_log": "FAILED tests/test_environment_error_119.py::test_environment_error_case_119 - EnvironmentError: REDIS_URL not configured\n============================= FAILURES ==============================\n_________________________ test_environment_error_case_119 _________________________\ntests/test_environment_error_119.py:49: in test_environment_error_case_119\n    EnvironmentError: REDIS_URL not configured\nenv var missing\n========================= 1 failed in 1.24s =========================",
+      "ground_truth_category": "environment_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated environment_error variant 14"
+    },
+    {
+      "id": "tc_110",
+      "raw_log": "FAILED tests/test_environment_error_110.py::test_environment_error_case_110 - EnvironmentError: REDIS_URL not configured\n============================= FAILURES ==============================\n_________________________ test_environment_error_case_110 _________________________\ntests/test_environment_error_110.py:40: in test_environment_error_case_110\n    EnvironmentError: REDIS_URL not configured\nenv var missing\n========================= 1 failed in 1.15s =========================",
+      "ground_truth_category": "environment_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated environment_error variant 5"
+    },
+    {
+      "id": "tc_134",
+      "raw_log": "FAILED tests/test_network_error_134.py::test_network_error_case_134 - HTTPError: 503 Service Unavailable\n============================= FAILURES ==============================\n_________________________ test_network_error_case_134 _________________________\ntests/test_network_error_134.py:24: in test_network_error_case_134\n    HTTPError: 503 Service Unavailable\nrequests.get(url)\n========================= 1 failed in 1.39s =========================",
+      "ground_truth_category": "network_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated network_error variant 4"
+    },
+    {
+      "id": "tc_143",
+      "raw_log": "FAILED tests/test_network_error_143.py::test_network_error_case_143 - TimeoutError: HTTPSConnectionPool read timed out\n============================= FAILURES ==============================\n_________________________ test_network_error_case_143 _________________________\ntests/test_network_error_143.py:33: in test_network_error_case_143\n    ConnectionError: HTTPSConnectionPool\nRead timed out\n========================= 1 failed in 1.48s =========================",
+      "ground_truth_category": "network_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated network_error variant 13"
+    },
+    {
+      "id": "tc_034",
+      "raw_log": "FAILED tests/test_assertion_error_034.py::test_assertion_error_case_34 - AssertionError: assert user.is_active is True\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_34 _________________________\ntests/test_assertion_error_034.py:44: in test_assertion_error_case_34\n    assert user.is_active is True\nE   AssertionError: assert False is True\n========================= 1 failed in 0.39s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated assertion_error variant 34"
+    },
+    {
+      "id": "tc_019",
+      "raw_log": "FAILED tests/test_assertion_error_019.py::test_assertion_error_case_19 - AssertionError: assert sorted(a) == sorted(b)\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_19 _________________________\ntests/test_assertion_error_019.py:29: in test_assertion_error_case_19\n    assert sorted(a) == sorted(b)\nE   AssertionError: lists differ\n========================= 1 failed in 0.24s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated assertion_error variant 19"
+    },
+    {
+      "id": "tc_141",
+      "raw_log": "FAILED tests/test_network_error_141.py::test_network_error_case_141 - HTTPError: 503 Service Unavailable\n============================= FAILURES ==============================\n_________________________ test_network_error_case_141 _________________________\ntests/test_network_error_141.py:31: in test_network_error_case_141\n    HTTPError: 503 Service Unavailable\nrequests.get(url)\n========================= 1 failed in 1.46s =========================",
+      "ground_truth_category": "network_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated network_error variant 11"
+    },
+    {
+      "id": "tc_124",
+      "raw_log": "FAILED tests/test_environment_error_124.py::test_environment_error_case_124 - KeyError: 'DATABASE_URL'\n============================= FAILURES ==============================\n_________________________ test_environment_error_case_124 _________________________\ntests/test_environment_error_124.py:14: in test_environment_error_case_124\n    KeyError: 'DATABASE_URL'\nos.environ['DATABASE_URL']\n========================= 1 failed in 1.29s =========================",
+      "ground_truth_category": "environment_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated environment_error variant 19"
+    },
+    {
+      "id": "tc_176",
+      "raw_log": "FAILED tests/test_flaky_176.py::test_flaky_case_176 - AssertionError: assert count == 100 (flaky: race condition)\n============================= FAILURES ==============================\n_________________________ test_flaky_case_176 _________________________\ntests/test_flaky_176.py:26: in test_flaky_case_176\n    assert count == 100\nE   AssertionError: assert 99 == 100\n# known flaky due to race condition\n========================= 1 failed in 1.81s =========================",
+      "ground_truth_category": "flaky",
+      "ground_truth_is_flaky": true,
+      "difficulty": "hard",
+      "notes": "Auto-generated flaky variant 11"
+    },
+    {
+      "id": "tc_064",
+      "raw_log": "FAILED tests/test_import_error_064.py::test_import_error_case_64 - ModuleNotFoundError: No module named 'openai'\n============================= FAILURES ==============================\n_________________________ test_import_error_case_64 _________________________\ntests/test_import_error_064.py:34: in test_import_error_case_64\n    ModuleNotFoundError: No module named 'openai'\n========================= 1 failed in 0.69s =========================",
+      "ground_truth_category": "import_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated import_error variant 14"
+    },
+    {
+      "id": "tc_084",
+      "raw_log": "FAILED tests/test_fixture_error_084.py::test_fixture_error_case_84 - FixtureError: ScopeMismatch: function-scoped fixture in session scope\n============================= FAILURES ==============================\n_________________________ test_fixture_error_case_84 _________________________\ntests/test_fixture_error_084.py:14: in test_fixture_error_case_84\n    fixture scope error failed\nScopeMismatch: function-scoped 'db'\n========================= 1 failed in 0.89s =========================",
+      "ground_truth_category": "fixture_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated fixture_error variant 14"
+    },
+    {
+      "id": "tc_149",
+      "raw_log": "FAILED tests/test_network_error_149.py::test_network_error_case_149 - ConnectionError: DNS resolution failed for api.example.com\n============================= FAILURES ==============================\n_________________________ test_network_error_case_149 _________________________\ntests/test_network_error_149.py:39: in test_network_error_case_149\n    ConnectionError: DNS\nDNS resolution failed\n========================= 1 failed in 1.54s =========================",
+      "ground_truth_category": "network_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated network_error variant 19"
+    },
+    {
+      "id": "tc_101",
+      "raw_log": "FAILED tests/test_timeout_101.py::test_timeout_case_101 - TimeoutError: operation timed out after 5.0s\n============================= FAILURES ==============================\n_________________________ test_timeout_case_101 _________________________\ntests/test_timeout_101.py:31: in test_timeout_case_101\n    TimeoutError: operation timed out after 5.0s\n========================= 1 failed in 1.06s =========================",
+      "ground_truth_category": "timeout",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated timeout variant 11"
+    },
+    {
+      "id": "tc_156",
+      "raw_log": "FAILED tests/test_data_error_156.py::test_data_error_case_156 - TypeError: expected str but got NoneType in test data\n============================= FAILURES ==============================\n_________________________ test_data_error_case_156 _________________________\ntests/test_data_error_156.py:46: in test_data_error_case_156\n    TypeError: expected str, got NoneType\nNo such file\n========================= 1 failed in 1.61s =========================",
+      "ground_truth_category": "data_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated data_error variant 6"
+    },
+    {
+      "id": "tc_073",
+      "raw_log": "FAILED tests/test_fixture_error_073.py::test_fixture_error_case_73 - FixtureError: fixture 'auth_client' not found\n============================= FAILURES ==============================\n_________________________ test_fixture_error_case_73 _________________________\ntests/test_fixture_error_073.py:43: in test_fixture_error_case_73\n    fixture 'auth_client' not found\n========================= 1 failed in 0.78s =========================",
+      "ground_truth_category": "fixture_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated fixture_error variant 3"
+    },
+    {
+      "id": "tc_028",
+      "raw_log": "FAILED tests/test_assertion_error_028.py::test_assertion_error_case_28 - AssertionError: assert db_record is not None\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_28 _________________________\ntests/test_assertion_error_028.py:38: in test_assertion_error_case_28\n    assert db_record is not None\nE   AssertionError\n========================= 1 failed in 0.33s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated assertion_error variant 28"
+    },
+    {
+      "id": "tc_185",
+      "raw_log": "FAILED tests/test_unknown_185.py::test_unknown_case_185 - TypeError: unsupported operand type(s) for +: 'int' and 'str'\n============================= FAILURES ==============================\n_________________________ test_unknown_case_185 _________________________\ntests/test_unknown_185.py:35: in test_unknown_case_185\n    TypeError: unsupported operand type(s) for +\n========================= 1 failed in 1.90s =========================",
+      "ground_truth_category": "unknown",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated unknown variant 5"
+    },
+    {
+      "id": "tc_113",
+      "raw_log": "FAILED tests/test_environment_error_113.py::test_environment_error_case_113 - EnvironmentError: missing required env var: STRIPE_KEY\n============================= FAILURES ==============================\n_________________________ test_environment_error_case_113 _________________________\ntests/test_environment_error_113.py:43: in test_environment_error_case_113\n    EnvironmentError: missing required env var STRIPE_KEY\n========================= 1 failed in 1.18s =========================",
+      "ground_truth_category": "environment_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated environment_error variant 8"
+    },
+    {
+      "id": "tc_052",
+      "raw_log": "FAILED tests/test_import_error_052.py::test_import_error_case_52 - ModuleNotFoundError: No module named 'celery'\n============================= FAILURES ==============================\n_________________________ test_import_error_case_52 _________________________\ntests/test_import_error_052.py:22: in test_import_error_case_52\n    ModuleNotFoundError: No module named 'celery'\n========================= 1 failed in 0.57s =========================",
+      "ground_truth_category": "import_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated import_error variant 2"
+    },
+    {
+      "id": "tc_175",
+      "raw_log": "FAILED tests/test_flaky_175.py::test_flaky_case_175 - RuntimeError: flaky: event loop already running\n============================= FAILURES ==============================\n_________________________ test_flaky_case_175 _________________________\ntests/test_flaky_175.py:25: in test_flaky_case_175\n    RuntimeError: This event loop is already running\nflaky test\n========================= 1 failed in 1.80s =========================",
+      "ground_truth_category": "flaky",
+      "ground_truth_is_flaky": true,
+      "difficulty": "medium",
+      "notes": "Auto-generated flaky variant 10"
+    },
+    {
+      "id": "tc_005",
+      "raw_log": "FAILED tests/test_assertion_error_005.py::test_assertion_error_case_5 - AssertionError: assert result['status'] == 'ok'\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_5 _________________________\ntests/test_assertion_error_005.py:15: in test_assertion_error_case_5\n    assert result['status'] == 'ok'\nE   AssertionError: assert 'error' == 'ok'\n========================= 1 failed in 0.10s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated assertion_error variant 5"
+    },
+    {
+      "id": "tc_030",
+      "raw_log": "FAILED tests/test_assertion_error_030.py::test_assertion_error_case_30 - AssertionError: assert mock.call_count == 1\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_30 _________________________\ntests/test_assertion_error_030.py:40: in test_assertion_error_case_30\n    assert mock.call_count == 1\nE   AssertionError: assert 0 == 1\n========================= 1 failed in 0.35s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated assertion_error variant 30"
+    },
+    {
+      "id": "tc_184",
+      "raw_log": "FAILED tests/test_unknown_184.py::test_unknown_case_184 - AttributeError: 'NoneType' object has no attribute 'split'\n============================= FAILURES ==============================\n_________________________ test_unknown_case_184 _________________________\ntests/test_unknown_184.py:34: in test_unknown_case_184\n    AttributeError: 'NoneType' object has no attribute 'split'\n========================= 1 failed in 1.89s =========================",
+      "ground_truth_category": "unknown",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated unknown variant 4"
+    },
+    {
+      "id": "tc_100",
+      "raw_log": "FAILED tests/test_timeout_100.py::test_timeout_case_100 - TimeoutError: read timed out after 10s\n============================= FAILURES ==============================\n_________________________ test_timeout_case_100 _________________________\ntests/test_timeout_100.py:30: in test_timeout_case_100\n    TimeoutError: read timed out after 10s\n========================= 1 failed in 1.05s =========================",
+      "ground_truth_category": "timeout",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated timeout variant 10"
+    },
+    {
+      "id": "tc_099",
+      "raw_log": "FAILED tests/test_timeout_099.py::test_timeout_case_99 - socket.timeout: timed out\n============================= FAILURES ==============================\n_________________________ test_timeout_case_99 _________________________\ntests/test_timeout_099.py:29: in test_timeout_case_99\n    socket.timeout: timed out\nconn.recv(1024)\n========================= 1 failed in 1.04s =========================",
+      "ground_truth_category": "timeout",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated timeout variant 9"
+    },
+    {
+      "id": "tc_132",
+      "raw_log": "FAILED tests/test_network_error_132.py::test_network_error_case_132 - ConnectionRefusedError: [Errno 111] Connection refused\n============================= FAILURES ==============================\n_________________________ test_network_error_case_132 _________________________\ntests/test_network_error_132.py:22: in test_network_error_case_132\n    ConnectionRefusedError: [Errno 111] Connection refused\nport 5432\n========================= 1 failed in 1.37s =========================",
+      "ground_truth_category": "network_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated network_error variant 2"
+    },
+    {
+      "id": "tc_125",
+      "raw_log": "FAILED tests/test_environment_error_125.py::test_environment_error_case_125 - KeyError: 'ANTHROPIC_API_KEY'\n============================= FAILURES ==============================\n_________________________ test_environment_error_case_125 _________________________\ntests/test_environment_error_125.py:15: in test_environment_error_case_125\n    KeyError: 'ANTHROPIC_API_KEY'\nenv var ANTHROPIC_API_KEY not set\n========================= 1 failed in 1.30s =========================",
+      "ground_truth_category": "environment_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated environment_error variant 20"
+    },
+    {
+      "id": "tc_199",
+      "raw_log": "FAILED tests/test_unknown_199.py::test_unknown_case_199 - TypeError: unsupported operand type(s) for +: 'int' and 'str'\n============================= FAILURES ==============================\n_________________________ test_unknown_case_199 _________________________\ntests/test_unknown_199.py:49: in test_unknown_case_199\n    TypeError: unsupported operand type(s) for +\n========================= 1 failed in 2.04s =========================",
+      "ground_truth_category": "unknown",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated unknown variant 19"
+    },
+    {
+      "id": "tc_135",
+      "raw_log": "FAILED tests/test_network_error_135.py::test_network_error_case_135 - ConnectionError: DNS resolution failed for api.example.com\n============================= FAILURES ==============================\n_________________________ test_network_error_case_135 _________________________\ntests/test_network_error_135.py:25: in test_network_error_case_135\n    ConnectionError: DNS\nDNS resolution failed\n========================= 1 failed in 1.40s =========================",
+      "ground_truth_category": "network_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated network_error variant 5"
+    },
+    {
+      "id": "tc_179",
+      "raw_log": "FAILED tests/test_flaky_179.py::test_flaky_case_179 - AssertionError: order-dependent test failure\n============================= FAILURES ==============================\n_________________________ test_flaky_case_179 _________________________\ntests/test_flaky_179.py:29: in test_flaky_case_179\n    assert items[0] == 'first'\nE   AssertionError: race condition in ordering\n========================= 1 failed in 1.84s =========================",
+      "ground_truth_category": "flaky",
+      "ground_truth_is_flaky": true,
+      "difficulty": "hard",
+      "notes": "Auto-generated flaky variant 14"
+    },
+    {
+      "id": "tc_121",
+      "raw_log": "FAILED tests/test_environment_error_121.py::test_environment_error_case_121 - KeyError: 'SECRET_KEY'\n============================= FAILURES ==============================\n_________________________ test_environment_error_case_121 _________________________\ntests/test_environment_error_121.py:11: in test_environment_error_case_121\n    KeyError: 'SECRET_KEY'\nenv var SECRET_KEY not set\n========================= 1 failed in 1.26s =========================",
+      "ground_truth_category": "environment_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated environment_error variant 16"
+    },
+    {
+      "id": "tc_035",
+      "raw_log": "FAILED tests/test_assertion_error_035.py::test_assertion_error_case_35 - AssertionError: assert result['status'] == 'ok'\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_35 _________________________\ntests/test_assertion_error_035.py:45: in test_assertion_error_case_35\n    assert result['status'] == 'ok'\nE   AssertionError: assert 'error' == 'ok'\n========================= 1 failed in 0.40s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated assertion_error variant 35"
+    },
+    {
+      "id": "tc_049",
+      "raw_log": "FAILED tests/test_assertion_error_049.py::test_assertion_error_case_49 - AssertionError: assert sorted(a) == sorted(b)\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_49 _________________________\ntests/test_assertion_error_049.py:19: in test_assertion_error_case_49\n    assert sorted(a) == sorted(b)\nE   AssertionError: lists differ\n========================= 1 failed in 0.54s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated assertion_error variant 49"
+    },
+    {
+      "id": "tc_170",
+      "raw_log": "FAILED tests/test_flaky_170.py::test_flaky_case_170 - RuntimeError: flaky: event loop already running\n============================= FAILURES ==============================\n_________________________ test_flaky_case_170 _________________________\ntests/test_flaky_170.py:20: in test_flaky_case_170\n    RuntimeError: This event loop is already running\nflaky test\n========================= 1 failed in 1.75s =========================",
+      "ground_truth_category": "flaky",
+      "ground_truth_is_flaky": true,
+      "difficulty": "easy",
+      "notes": "Auto-generated flaky variant 5"
+    },
+    {
+      "id": "tc_139",
+      "raw_log": "FAILED tests/test_network_error_139.py::test_network_error_case_139 - ConnectionRefusedError: [Errno 111] Connection refused\n============================= FAILURES ==============================\n_________________________ test_network_error_case_139 _________________________\ntests/test_network_error_139.py:29: in test_network_error_case_139\n    ConnectionRefusedError: [Errno 111] Connection refused\nport 5432\n========================= 1 failed in 1.44s =========================",
+      "ground_truth_category": "network_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated network_error variant 9"
+    },
+    {
+      "id": "tc_150",
+      "raw_log": "FAILED tests/test_network_error_150.py::test_network_error_case_150 - TimeoutError: HTTPSConnectionPool read timed out\n============================= FAILURES ==============================\n_________________________ test_network_error_case_150 _________________________\ntests/test_network_error_150.py:40: in test_network_error_case_150\n    ConnectionError: HTTPSConnectionPool\nRead timed out\n========================= 1 failed in 1.55s =========================",
+      "ground_truth_category": "network_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated network_error variant 20"
+    },
+    {
+      "id": "tc_133",
+      "raw_log": "FAILED tests/test_network_error_133.py::test_network_error_case_133 - SSLError: certificate verify failed: unable to get local issuer certificate\n============================= FAILURES ==============================\n_________________________ test_network_error_case_133 _________________________\ntests/test_network_error_133.py:23: in test_network_error_case_133\n    SSLError: certificate verify failed\n========================= 1 failed in 1.38s =========================",
+      "ground_truth_category": "network_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated network_error variant 3"
+    },
+    {
+      "id": "tc_128",
+      "raw_log": "FAILED tests/test_environment_error_128.py::test_environment_error_case_128 - EnvironmentError: REDIS_URL not configured\n============================= FAILURES ==============================\n_________________________ test_environment_error_case_128 _________________________\ntests/test_environment_error_128.py:18: in test_environment_error_case_128\n    EnvironmentError: REDIS_URL not configured\nenv var missing\n========================= 1 failed in 1.33s =========================",
+      "ground_truth_category": "environment_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated environment_error variant 23"
+    },
+    {
+      "id": "tc_022",
+      "raw_log": "FAILED tests/test_assertion_error_022.py::test_assertion_error_case_22 - AssertionError: assert response.status_code == 200\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_22 _________________________\ntests/test_assertion_error_022.py:32: in test_assertion_error_case_22\n    assert response.status_code == 200\nE   AssertionError: assert 404 == 200\n========================= 1 failed in 0.27s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated assertion_error variant 22"
+    },
+    {
+      "id": "tc_082",
+      "raw_log": "FAILED tests/test_fixture_error_082.py::test_fixture_error_case_82 - FixtureError: fixture setup failed: ConnectionRefused\n============================= FAILURES ==============================\n_________________________ test_fixture_error_case_82 _________________________\ntests/test_fixture_error_082.py:12: in test_fixture_error_case_82\n    fixture 'redis_client' setup failed error\nConnectionRefusedError: [Errno 111]\n========================= 1 failed in 0.87s =========================",
+      "ground_truth_category": "fixture_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated fixture_error variant 12"
+    },
+    {
+      "id": "tc_078",
+      "raw_log": "FAILED tests/test_fixture_error_078.py::test_fixture_error_case_78 - FixtureError: fixture 'db_session' not found\n============================= FAILURES ==============================\n_________________________ test_fixture_error_case_78 _________________________\ntests/test_fixture_error_078.py:48: in test_fixture_error_case_78\n    fixture 'db_session' not found\navailable fixtures: tmp_path, capsys\n========================= 1 failed in 0.83s =========================",
+      "ground_truth_category": "fixture_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated fixture_error variant 8"
+    },
+    {
+      "id": "tc_010",
+      "raw_log": "FAILED tests/test_assertion_error_010.py::test_assertion_error_case_10 - AssertionError: assert mock.call_count == 1\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_10 _________________________\ntests/test_assertion_error_010.py:20: in test_assertion_error_case_10\n    assert mock.call_count == 1\nE   AssertionError: assert 0 == 1\n========================= 1 failed in 0.15s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated assertion_error variant 10"
+    },
+    {
+      "id": "tc_083",
+      "raw_log": "FAILED tests/test_fixture_error_083.py::test_fixture_error_case_83 - FixtureError: fixture 'app' error during teardown\n============================= FAILURES ==============================\n_________________________ test_fixture_error_case_83 _________________________\ntests/test_fixture_error_083.py:13: in test_fixture_error_case_83\n    fixture 'app' teardown error failed\nRuntimeError: event loop closed\n========================= 1 failed in 0.88s =========================",
+      "ground_truth_category": "fixture_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated fixture_error variant 13"
+    },
+    {
+      "id": "tc_165",
+      "raw_log": "FAILED tests/test_data_error_165.py::test_data_error_case_165 - ValueError: schema mismatch: expected 'id' field missing\n============================= FAILURES ==============================\n_________________________ test_data_error_case_165 _________________________\ntests/test_data_error_165.py:15: in test_data_error_case_165\n    ValueError: schema mismatch\nexpected 'id' field missing\n========================= 1 failed in 1.70s =========================",
+      "ground_truth_category": "data_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated data_error variant 15"
+    },
+    {
+      "id": "tc_120",
+      "raw_log": "FAILED tests/test_environment_error_120.py::test_environment_error_case_120 - RuntimeError: Python 3.9 required, got 3.8\n============================= FAILURES ==============================\n_________________________ test_environment_error_case_120 _________________________\ntests/test_environment_error_120.py:10: in test_environment_error_case_120\n    RuntimeError: Python 3.9 required\nos.environ check\n========================= 1 failed in 1.25s =========================",
+      "ground_truth_category": "environment_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated environment_error variant 15"
+    },
+    {
+      "id": "tc_090",
+      "raw_log": "FAILED tests/test_fixture_error_090.py::test_fixture_error_case_90 - FixtureError: fixture 'app' error during teardown\n============================= FAILURES ==============================\n_________________________ test_fixture_error_case_90 _________________________\ntests/test_fixture_error_090.py:20: in test_fixture_error_case_90\n    fixture 'app' teardown error failed\nRuntimeError: event loop closed\n========================= 1 failed in 0.95s =========================",
+      "ground_truth_category": "fixture_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated fixture_error variant 20"
+    },
+    {
+      "id": "tc_069",
+      "raw_log": "FAILED tests/test_import_error_069.py::test_import_error_case_69 - ModuleNotFoundError: No module named 'psycopg2'\n============================= FAILURES ==============================\n_________________________ test_import_error_case_69 _________________________\ntests/test_import_error_069.py:39: in test_import_error_case_69\n    ModuleNotFoundError: No module named 'psycopg2'\n========================= 1 failed in 0.74s =========================",
+      "ground_truth_category": "import_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated import_error variant 19"
+    },
+    {
+      "id": "tc_054",
+      "raw_log": "FAILED tests/test_import_error_054.py::test_import_error_case_54 - ImportError: cannot import name 'AsyncClient' from 'httpx'\n============================= FAILURES ==============================\n_________________________ test_import_error_case_54 _________________________\ntests/test_import_error_054.py:24: in test_import_error_case_54\n    ImportError: cannot import name 'AsyncClient'\n========================= 1 failed in 0.59s =========================",
+      "ground_truth_category": "import_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated import_error variant 4"
+    },
+    {
+      "id": "tc_091",
+      "raw_log": "FAILED tests/test_timeout_091.py::test_timeout_case_91 - TimeoutError: operation timed out after 5.0s\n============================= FAILURES ==============================\n_________________________ test_timeout_case_91 _________________________\ntests/test_timeout_091.py:21: in test_timeout_case_91\n    TimeoutError: operation timed out after 5.0s\n========================= 1 failed in 0.96s =========================",
+      "ground_truth_category": "timeout",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated timeout variant 1"
+    },
+    {
+      "id": "tc_095",
+      "raw_log": "FAILED tests/test_timeout_095.py::test_timeout_case_95 - TimeoutError: read timed out after 10s\n============================= FAILURES ==============================\n_________________________ test_timeout_case_95 _________________________\ntests/test_timeout_095.py:25: in test_timeout_case_95\n    TimeoutError: read timed out after 10s\n========================= 1 failed in 1.00s =========================",
+      "ground_truth_category": "timeout",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated timeout variant 5"
+    },
+    {
+      "id": "tc_042",
+      "raw_log": "FAILED tests/test_assertion_error_042.py::test_assertion_error_case_42 - AssertionError: assert response.status_code == 200\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_42 _________________________\ntests/test_assertion_error_042.py:12: in test_assertion_error_case_42\n    assert response.status_code == 200\nE   AssertionError: assert 404 == 200\n========================= 1 failed in 0.47s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated assertion_error variant 42"
+    },
+    {
+      "id": "tc_094",
+      "raw_log": "FAILED tests/test_timeout_094.py::test_timeout_case_94 - socket.timeout: timed out\n============================= FAILURES ==============================\n_________________________ test_timeout_case_94 _________________________\ntests/test_timeout_094.py:24: in test_timeout_case_94\n    socket.timeout: timed out\nconn.recv(1024)\n========================= 1 failed in 0.99s =========================",
+      "ground_truth_category": "timeout",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated timeout variant 4"
+    },
+    {
+      "id": "tc_117",
+      "raw_log": "FAILED tests/test_environment_error_117.py::test_environment_error_case_117 - KeyError: 'SMTP_HOST'\n============================= FAILURES ==============================\n_________________________ test_environment_error_case_117 _________________________\ntests/test_environment_error_117.py:47: in test_environment_error_case_117\n    KeyError: 'SMTP_HOST'\nos.environ access\n========================= 1 failed in 1.22s =========================",
+      "ground_truth_category": "environment_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated environment_error variant 12"
+    },
+    {
+      "id": "tc_200",
+      "raw_log": "FAILED tests/test_unknown_200.py::test_unknown_case_200 - RuntimeError: coroutine was never awaited\n============================= FAILURES ==============================\n_________________________ test_unknown_case_200 _________________________\ntests/test_unknown_200.py:10: in test_unknown_case_200\n    RuntimeError: coroutine 'foo' was never awaited\n========================= 1 failed in 2.05s =========================",
+      "ground_truth_category": "unknown",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated unknown variant 20"
+    },
+    {
+      "id": "tc_158",
+      "raw_log": "FAILED tests/test_data_error_158.py::test_data_error_case_158 - FileNotFoundError: No such file or directory: 'fixtures/schema.json'\n============================= FAILURES ==============================\n_________________________ test_data_error_case_158 _________________________\ntests/test_data_error_158.py:48: in test_data_error_case_158\n    FileNotFoundError: No such file or directory: 'fixtures/schema.json'\n========================= 1 failed in 1.63s =========================",
+      "ground_truth_category": "data_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated data_error variant 8"
+    },
+    {
+      "id": "tc_026",
+      "raw_log": "FAILED tests/test_assertion_error_026.py::test_assertion_error_case_26 - AssertionError: assert price > 0\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_26 _________________________\ntests/test_assertion_error_026.py:36: in test_assertion_error_case_26\n    assert price > 0\nE   AssertionError: assert -1 > 0\n========================= 1 failed in 0.31s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated assertion_error variant 26"
+    },
+    {
+      "id": "tc_181",
+      "raw_log": "FAILED tests/test_unknown_181.py::test_unknown_case_181 - RecursionError: maximum recursion depth exceeded\n============================= FAILURES ==============================\n_________________________ test_unknown_case_181 _________________________\ntests/test_unknown_181.py:31: in test_unknown_case_181\n    RecursionError: maximum recursion depth exceeded\n========================= 1 failed in 1.86s =========================",
+      "ground_truth_category": "unknown",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated unknown variant 1"
+    },
+    {
+      "id": "tc_148",
+      "raw_log": "FAILED tests/test_network_error_148.py::test_network_error_case_148 - HTTPError: 503 Service Unavailable\n============================= FAILURES ==============================\n_________________________ test_network_error_case_148 _________________________\ntests/test_network_error_148.py:38: in test_network_error_case_148\n    HTTPError: 503 Service Unavailable\nrequests.get(url)\n========================= 1 failed in 1.53s =========================",
+      "ground_truth_category": "network_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated network_error variant 18"
+    },
+    {
+      "id": "tc_075",
+      "raw_log": "FAILED tests/test_fixture_error_075.py::test_fixture_error_case_75 - FixtureError: fixture setup failed: ConnectionRefused\n============================= FAILURES ==============================\n_________________________ test_fixture_error_case_75 _________________________\ntests/test_fixture_error_075.py:45: in test_fixture_error_case_75\n    fixture 'redis_client' setup failed error\nConnectionRefusedError: [Errno 111]\n========================= 1 failed in 0.80s =========================",
+      "ground_truth_category": "fixture_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated fixture_error variant 5"
+    },
+    {
+      "id": "tc_059",
+      "raw_log": "FAILED tests/test_import_error_059.py::test_import_error_case_59 - ModuleNotFoundError: No module named 'celery'\n============================= FAILURES ==============================\n_________________________ test_import_error_case_59 _________________________\ntests/test_import_error_059.py:29: in test_import_error_case_59\n    ModuleNotFoundError: No module named 'celery'\n========================= 1 failed in 0.64s =========================",
+      "ground_truth_category": "import_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated import_error variant 9"
+    },
+    {
+      "id": "tc_153",
+      "raw_log": "FAILED tests/test_data_error_153.py::test_data_error_case_153 - ValueError: schema mismatch: expected 'id' field missing\n============================= FAILURES ==============================\n_________________________ test_data_error_case_153 _________________________\ntests/test_data_error_153.py:43: in test_data_error_case_153\n    ValueError: schema mismatch\nexpected 'id' field missing\n========================= 1 failed in 1.58s =========================",
+      "ground_truth_category": "data_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated data_error variant 3"
+    },
+    {
+      "id": "tc_018",
+      "raw_log": "FAILED tests/test_assertion_error_018.py::test_assertion_error_case_18 - AssertionError: assert db_record is not None\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_18 _________________________\ntests/test_assertion_error_018.py:28: in test_assertion_error_case_18\n    assert db_record is not None\nE   AssertionError\n========================= 1 failed in 0.23s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated assertion_error variant 18"
+    },
+    {
+      "id": "tc_050",
+      "raw_log": "FAILED tests/test_assertion_error_050.py::test_assertion_error_case_50 - AssertionError: assert mock.call_count == 1\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_50 _________________________\ntests/test_assertion_error_050.py:20: in test_assertion_error_case_50\n    assert mock.call_count == 1\nE   AssertionError: assert 0 == 1\n========================= 1 failed in 0.55s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated assertion_error variant 50"
+    },
+    {
+      "id": "tc_093",
+      "raw_log": "FAILED tests/test_timeout_093.py::test_timeout_case_93 - asyncio.TimeoutError: future timed out\n============================= FAILURES ==============================\n_________________________ test_timeout_case_93 _________________________\ntests/test_timeout_093.py:23: in test_timeout_case_93\n    asyncio.TimeoutError\nfuture: <Task pending>\n========================= 1 failed in 0.98s =========================",
+      "ground_truth_category": "timeout",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated timeout variant 3"
+    },
+    {
+      "id": "tc_076",
+      "raw_log": "FAILED tests/test_fixture_error_076.py::test_fixture_error_case_76 - FixtureError: fixture 'app' error during teardown\n============================= FAILURES ==============================\n_________________________ test_fixture_error_case_76 _________________________\ntests/test_fixture_error_076.py:46: in test_fixture_error_case_76\n    fixture 'app' teardown error failed\nRuntimeError: event loop closed\n========================= 1 failed in 0.81s =========================",
+      "ground_truth_category": "fixture_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated fixture_error variant 6"
+    },
+    {
+      "id": "tc_142",
+      "raw_log": "FAILED tests/test_network_error_142.py::test_network_error_case_142 - ConnectionError: DNS resolution failed for api.example.com\n============================= FAILURES ==============================\n_________________________ test_network_error_case_142 _________________________\ntests/test_network_error_142.py:32: in test_network_error_case_142\n    ConnectionError: DNS\nDNS resolution failed\n========================= 1 failed in 1.47s =========================",
+      "ground_truth_category": "network_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated network_error variant 12"
+    },
+    {
+      "id": "tc_021",
+      "raw_log": "FAILED tests/test_assertion_error_021.py::test_assertion_error_case_21 - AssertionError: assert {a} == {b}\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_21 _________________________\ntests/test_assertion_error_021.py:31: in test_assertion_error_case_21\n    assert result == expected\nE   AssertionError: assert 63 == 64\n========================= 1 failed in 0.26s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated assertion_error variant 21"
+    },
+    {
+      "id": "tc_097",
+      "raw_log": "FAILED tests/test_timeout_097.py::test_timeout_case_97 - TimeoutError: test timed out after 30s\n============================= FAILURES ==============================\n_________________________ test_timeout_case_97 _________________________\ntests/test_timeout_097.py:27: in test_timeout_case_97\n    TimeoutError: test timed out after 30s\n========================= 1 failed in 1.02s =========================",
+      "ground_truth_category": "timeout",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated timeout variant 7"
+    },
+    {
+      "id": "tc_032",
+      "raw_log": "FAILED tests/test_assertion_error_032.py::test_assertion_error_case_32 - AssertionError: assert response.status_code == 200\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_32 _________________________\ntests/test_assertion_error_032.py:42: in test_assertion_error_case_32\n    assert response.status_code == 200\nE   AssertionError: assert 404 == 200\n========================= 1 failed in 0.37s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated assertion_error variant 32"
+    },
+    {
+      "id": "tc_138",
+      "raw_log": "FAILED tests/test_network_error_138.py::test_network_error_case_138 - ConnectionError: Max retries exceeded with url: /api/v1/status\n============================= FAILURES ==============================\n_________________________ test_network_error_case_138 _________________________\ntests/test_network_error_138.py:28: in test_network_error_case_138\n    ConnectionError: HTTPSConnectionPool\nMax retries exceeded\n========================= 1 failed in 1.43s =========================",
+      "ground_truth_category": "network_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated network_error variant 8"
+    },
+    {
+      "id": "tc_118",
+      "raw_log": "FAILED tests/test_environment_error_118.py::test_environment_error_case_118 - KeyError: 'AWS_SECRET_ACCESS_KEY'\n============================= FAILURES ==============================\n_________________________ test_environment_error_case_118 _________________________\ntests/test_environment_error_118.py:48: in test_environment_error_case_118\n    KeyError: 'AWS_SECRET_ACCESS_KEY'\nos.environ['AWS_SECRET_ACCESS_KEY']\n========================= 1 failed in 1.23s =========================",
+      "ground_truth_category": "environment_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated environment_error variant 13"
+    },
+    {
+      "id": "tc_012",
+      "raw_log": "FAILED tests/test_assertion_error_012.py::test_assertion_error_case_12 - AssertionError: assert response.status_code == 200\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_12 _________________________\ntests/test_assertion_error_012.py:22: in test_assertion_error_case_12\n    assert response.status_code == 200\nE   AssertionError: assert 404 == 200\n========================= 1 failed in 0.17s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated assertion_error variant 12"
+    },
+    {
+      "id": "tc_068",
+      "raw_log": "FAILED tests/test_import_error_068.py::test_import_error_case_68 - ImportError: cannot import name 'AsyncClient' from 'httpx'\n============================= FAILURES ==============================\n_________________________ test_import_error_case_68 _________________________\ntests/test_import_error_068.py:38: in test_import_error_case_68\n    ImportError: cannot import name 'AsyncClient'\n========================= 1 failed in 0.73s =========================",
+      "ground_truth_category": "import_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated import_error variant 18"
+    },
+    {
+      "id": "tc_089",
+      "raw_log": "FAILED tests/test_fixture_error_089.py::test_fixture_error_case_89 - FixtureError: fixture setup failed: ConnectionRefused\n============================= FAILURES ==============================\n_________________________ test_fixture_error_case_89 _________________________\ntests/test_fixture_error_089.py:19: in test_fixture_error_case_89\n    fixture 'redis_client' setup failed error\nConnectionRefusedError: [Errno 111]\n========================= 1 failed in 0.94s =========================",
+      "ground_truth_category": "fixture_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated fixture_error variant 19"
+    },
+    {
+      "id": "tc_092",
+      "raw_log": "FAILED tests/test_timeout_092.py::test_timeout_case_92 - TimeoutError: test timed out after 30s\n============================= FAILURES ==============================\n_________________________ test_timeout_case_92 _________________________\ntests/test_timeout_092.py:22: in test_timeout_case_92\n    TimeoutError: test timed out after 30s\n========================= 1 failed in 0.97s =========================",
+      "ground_truth_category": "timeout",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated timeout variant 2"
+    },
+    {
+      "id": "tc_025",
+      "raw_log": "FAILED tests/test_assertion_error_025.py::test_assertion_error_case_25 - AssertionError: assert result['status'] == 'ok'\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_25 _________________________\ntests/test_assertion_error_025.py:35: in test_assertion_error_case_25\n    assert result['status'] == 'ok'\nE   AssertionError: assert 'error' == 'ok'\n========================= 1 failed in 0.30s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated assertion_error variant 25"
+    },
+    {
+      "id": "tc_098",
+      "raw_log": "FAILED tests/test_timeout_098.py::test_timeout_case_98 - asyncio.TimeoutError: future timed out\n============================= FAILURES ==============================\n_________________________ test_timeout_case_98 _________________________\ntests/test_timeout_098.py:28: in test_timeout_case_98\n    asyncio.TimeoutError\nfuture: <Task pending>\n========================= 1 failed in 1.03s =========================",
+      "ground_truth_category": "timeout",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated timeout variant 8"
+    },
+    {
+      "id": "tc_183",
+      "raw_log": "FAILED tests/test_unknown_183.py::test_unknown_case_183 - SystemExit: 1\n============================= FAILURES ==============================\n_________________________ test_unknown_case_183 _________________________\ntests/test_unknown_183.py:33: in test_unknown_case_183\n    SystemExit: 1\n========================= 1 failed in 1.88s =========================",
+      "ground_truth_category": "unknown",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated unknown variant 3"
+    },
+    {
+      "id": "tc_191",
+      "raw_log": "FAILED tests/test_unknown_191.py::test_unknown_case_191 - AttributeError: 'NoneType' object has no attribute 'split'\n============================= FAILURES ==============================\n_________________________ test_unknown_case_191 _________________________\ntests/test_unknown_191.py:41: in test_unknown_case_191\n    AttributeError: 'NoneType' object has no attribute 'split'\n========================= 1 failed in 1.96s =========================",
+      "ground_truth_category": "unknown",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated unknown variant 11"
+    },
+    {
+      "id": "tc_087",
+      "raw_log": "FAILED tests/test_fixture_error_087.py::test_fixture_error_case_87 - FixtureError: fixture 'auth_client' not found\n============================= FAILURES ==============================\n_________________________ test_fixture_error_case_87 _________________________\ntests/test_fixture_error_087.py:17: in test_fixture_error_case_87\n    fixture 'auth_client' not found\n========================= 1 failed in 0.92s =========================",
+      "ground_truth_category": "fixture_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated fixture_error variant 17"
+    },
+    {
+      "id": "tc_182",
+      "raw_log": "FAILED tests/test_unknown_182.py::test_unknown_case_182 - MemoryError: \n============================= FAILURES ==============================\n_________________________ test_unknown_case_182 _________________________\ntests/test_unknown_182.py:32: in test_unknown_case_182\n    MemoryError\nfailed to allocate memory\n========================= 1 failed in 1.87s =========================",
+      "ground_truth_category": "unknown",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated unknown variant 2"
+    },
+    {
+      "id": "tc_040",
+      "raw_log": "FAILED tests/test_assertion_error_040.py::test_assertion_error_case_40 - AssertionError: assert mock.call_count == 1\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_40 _________________________\ntests/test_assertion_error_040.py:10: in test_assertion_error_case_40\n    assert mock.call_count == 1\nE   AssertionError: assert 0 == 1\n========================= 1 failed in 0.45s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated assertion_error variant 40"
+    },
+    {
+      "id": "tc_169",
+      "raw_log": "FAILED tests/test_flaky_169.py::test_flaky_case_169 - AssertionError: order-dependent test failure\n============================= FAILURES ==============================\n_________________________ test_flaky_case_169 _________________________\ntests/test_flaky_169.py:19: in test_flaky_case_169\n    assert items[0] == 'first'\nE   AssertionError: race condition in ordering\n========================= 1 failed in 1.74s =========================",
+      "ground_truth_category": "flaky",
+      "ground_truth_is_flaky": true,
+      "difficulty": "easy",
+      "notes": "Auto-generated flaky variant 4"
+    },
+    {
+      "id": "tc_088",
+      "raw_log": "FAILED tests/test_fixture_error_088.py::test_fixture_error_case_88 - FixtureError: fixture 'event_loop' not found\n============================= FAILURES ==============================\n_________________________ test_fixture_error_case_88 _________________________\ntests/test_fixture_error_088.py:18: in test_fixture_error_case_88\n    fixture 'event_loop' not found\nhint: use pytest-asyncio\n========================= 1 failed in 0.93s =========================",
+      "ground_truth_category": "fixture_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated fixture_error variant 18"
+    },
+    {
+      "id": "tc_186",
+      "raw_log": "FAILED tests/test_unknown_186.py::test_unknown_case_186 - RuntimeError: coroutine was never awaited\n============================= FAILURES ==============================\n_________________________ test_unknown_case_186 _________________________\ntests/test_unknown_186.py:36: in test_unknown_case_186\n    RuntimeError: coroutine 'foo' was never awaited\n========================= 1 failed in 1.91s =========================",
+      "ground_truth_category": "unknown",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated unknown variant 6"
+    },
+    {
+      "id": "tc_041",
+      "raw_log": "FAILED tests/test_assertion_error_041.py::test_assertion_error_case_41 - AssertionError: assert {a} == {b}\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_41 _________________________\ntests/test_assertion_error_041.py:11: in test_assertion_error_case_41\n    assert result == expected\nE   AssertionError: assert 123 == 124\n========================= 1 failed in 0.46s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated assertion_error variant 41"
+    },
+    {
+      "id": "tc_002",
+      "raw_log": "FAILED tests/test_assertion_error_002.py::test_assertion_error_case_2 - AssertionError: assert response.status_code == 200\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_2 _________________________\ntests/test_assertion_error_002.py:12: in test_assertion_error_case_2\n    assert response.status_code == 200\nE   AssertionError: assert 404 == 200\n========================= 1 failed in 0.07s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated assertion_error variant 2"
+    },
+    {
+      "id": "tc_072",
+      "raw_log": "FAILED tests/test_fixture_error_072.py::test_fixture_error_case_72 - FixtureError: fixture 'mock_s3' not found\n============================= FAILURES ==============================\n_________________________ test_fixture_error_case_72 _________________________\ntests/test_fixture_error_072.py:42: in test_fixture_error_case_72\n    fixture 'mock_s3' not found\navailable fixtures: tmp_path\n========================= 1 failed in 0.77s =========================",
+      "ground_truth_category": "fixture_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated fixture_error variant 2"
+    },
+    {
+      "id": "tc_151",
+      "raw_log": "FAILED tests/test_data_error_151.py::test_data_error_case_151 - FileNotFoundError: [Errno 2] No such file or directory: 'data/test_input.csv'\n============================= FAILURES ==============================\n_________________________ test_data_error_case_151 _________________________\ntests/test_data_error_151.py:41: in test_data_error_case_151\n    FileNotFoundError: No such file or directory: 'data/test_input.csv'\n========================= 1 failed in 1.56s =========================",
+      "ground_truth_category": "data_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated data_error variant 1"
+    },
+    {
+      "id": "tc_115",
+      "raw_log": "FAILED tests/test_environment_error_115.py::test_environment_error_case_115 - KeyError: 'DATABASE_URL'\n============================= FAILURES ==============================\n_________________________ test_environment_error_case_115 _________________________\ntests/test_environment_error_115.py:45: in test_environment_error_case_115\n    KeyError: 'DATABASE_URL'\nos.environ['DATABASE_URL']\n========================= 1 failed in 1.20s =========================",
+      "ground_truth_category": "environment_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated environment_error variant 10"
+    },
+    {
+      "id": "tc_057",
+      "raw_log": "FAILED tests/test_import_error_057.py::test_import_error_case_57 - ModuleNotFoundError: No module named 'openai'\n============================= FAILURES ==============================\n_________________________ test_import_error_case_57 _________________________\ntests/test_import_error_057.py:27: in test_import_error_case_57\n    ModuleNotFoundError: No module named 'openai'\n========================= 1 failed in 0.62s =========================",
+      "ground_truth_category": "import_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated import_error variant 7"
+    },
+    {
+      "id": "tc_108",
+      "raw_log": "FAILED tests/test_environment_error_108.py::test_environment_error_case_108 - KeyError: 'SMTP_HOST'\n============================= FAILURES ==============================\n_________________________ test_environment_error_case_108 _________________________\ntests/test_environment_error_108.py:38: in test_environment_error_case_108\n    KeyError: 'SMTP_HOST'\nos.environ access\n========================= 1 failed in 1.13s =========================",
+      "ground_truth_category": "environment_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated environment_error variant 3"
+    },
+    {
+      "id": "tc_192",
+      "raw_log": "FAILED tests/test_unknown_192.py::test_unknown_case_192 - TypeError: unsupported operand type(s) for +: 'int' and 'str'\n============================= FAILURES ==============================\n_________________________ test_unknown_case_192 _________________________\ntests/test_unknown_192.py:42: in test_unknown_case_192\n    TypeError: unsupported operand type(s) for +\n========================= 1 failed in 1.97s =========================",
+      "ground_truth_category": "unknown",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated unknown variant 12"
+    },
+    {
+      "id": "tc_167",
+      "raw_log": "FAILED tests/test_flaky_167.py::test_flaky_case_167 - AssertionError: assert result is non-deterministic\n============================= FAILURES ==============================\n_________________________ test_flaky_case_167 _________________________\ntests/test_flaky_167.py:17: in test_flaky_case_167\n    assert result == expected\nE   AssertionError\n# non-deterministic test output\n========================= 1 failed in 1.72s =========================",
+      "ground_truth_category": "flaky",
+      "ground_truth_is_flaky": true,
+      "difficulty": "easy",
+      "notes": "Auto-generated flaky variant 2"
+    },
+    {
+      "id": "tc_051",
+      "raw_log": "FAILED tests/test_import_error_051.py::test_import_error_case_51 - ModuleNotFoundError: No module named 'redis'\n============================= FAILURES ==============================\n_________________________ test_import_error_case_51 _________________________\ntests/test_import_error_051.py:21: in test_import_error_case_51\n    ModuleNotFoundError: No module named 'redis'\n========================= 1 failed in 0.56s =========================",
+      "ground_truth_category": "import_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated import_error variant 1"
+    },
+    {
+      "id": "tc_144",
+      "raw_log": "FAILED tests/test_network_error_144.py::test_network_error_case_144 - ConnectionResetError: [Errno 104] Connection reset by peer\n============================= FAILURES ==============================\n_________________________ test_network_error_case_144 _________________________\ntests/test_network_error_144.py:34: in test_network_error_case_144\n    ConnectionResetError: [Errno 104]\n========================= 1 failed in 1.49s =========================",
+      "ground_truth_category": "network_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated network_error variant 14"
+    },
+    {
+      "id": "tc_198",
+      "raw_log": "FAILED tests/test_unknown_198.py::test_unknown_case_198 - AttributeError: 'NoneType' object has no attribute 'split'\n============================= FAILURES ==============================\n_________________________ test_unknown_case_198 _________________________\ntests/test_unknown_198.py:48: in test_unknown_case_198\n    AttributeError: 'NoneType' object has no attribute 'split'\n========================= 1 failed in 2.03s =========================",
+      "ground_truth_category": "unknown",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated unknown variant 18"
+    },
+    {
+      "id": "tc_155",
+      "raw_log": "FAILED tests/test_data_error_155.py::test_data_error_case_155 - KeyError: 'user_id' not in response payload\n============================= FAILURES ==============================\n_________________________ test_data_error_case_155 _________________________\ntests/test_data_error_155.py:45: in test_data_error_case_155\n    KeyError: 'user_id'\nschema mismatch\n========================= 1 failed in 1.60s =========================",
+      "ground_truth_category": "data_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated data_error variant 5"
+    },
+    {
+      "id": "tc_130",
+      "raw_log": "FAILED tests/test_environment_error_130.py::test_environment_error_case_130 - KeyError: 'SECRET_KEY'\n============================= FAILURES ==============================\n_________________________ test_environment_error_case_130 _________________________\ntests/test_environment_error_130.py:20: in test_environment_error_case_130\n    KeyError: 'SECRET_KEY'\nenv var SECRET_KEY not set\n========================= 1 failed in 1.35s =========================",
+      "ground_truth_category": "environment_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated environment_error variant 25"
+    },
+    {
+      "id": "tc_060",
+      "raw_log": "FAILED tests/test_import_error_060.py::test_import_error_case_60 - ModuleNotFoundError: No module named 'boto3'\n============================= FAILURES ==============================\n_________________________ test_import_error_case_60 _________________________\ntests/test_import_error_060.py:30: in test_import_error_case_60\n    ModuleNotFoundError: No module named 'boto3'\n========================= 1 failed in 0.65s =========================",
+      "ground_truth_category": "import_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated import_error variant 10"
+    },
+    {
+      "id": "tc_056",
+      "raw_log": "FAILED tests/test_import_error_056.py::test_import_error_case_56 - ImportError: cannot import name 'field_validator' from 'pydantic'\n============================= FAILURES ==============================\n_________________________ test_import_error_case_56 _________________________\ntests/test_import_error_056.py:26: in test_import_error_case_56\n    ImportError: cannot import name 'field_validator'\n========================= 1 failed in 0.61s =========================",
+      "ground_truth_category": "import_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated import_error variant 6"
+    },
+    {
+      "id": "tc_024",
+      "raw_log": "FAILED tests/test_assertion_error_024.py::test_assertion_error_case_24 - AssertionError: assert user.is_active is True\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_24 _________________________\ntests/test_assertion_error_024.py:34: in test_assertion_error_case_24\n    assert user.is_active is True\nE   AssertionError: assert False is True\n========================= 1 failed in 0.29s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated assertion_error variant 24"
+    },
+    {
+      "id": "tc_008",
+      "raw_log": "FAILED tests/test_assertion_error_008.py::test_assertion_error_case_8 - AssertionError: assert db_record is not None\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_8 _________________________\ntests/test_assertion_error_008.py:18: in test_assertion_error_case_8\n    assert db_record is not None\nE   AssertionError\n========================= 1 failed in 0.13s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated assertion_error variant 8"
+    },
+    {
+      "id": "tc_009",
+      "raw_log": "FAILED tests/test_assertion_error_009.py::test_assertion_error_case_9 - AssertionError: assert sorted(a) == sorted(b)\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_9 _________________________\ntests/test_assertion_error_009.py:19: in test_assertion_error_case_9\n    assert sorted(a) == sorted(b)\nE   AssertionError: lists differ\n========================= 1 failed in 0.14s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated assertion_error variant 9"
+    },
+    {
+      "id": "tc_109",
+      "raw_log": "FAILED tests/test_environment_error_109.py::test_environment_error_case_109 - KeyError: 'AWS_SECRET_ACCESS_KEY'\n============================= FAILURES ==============================\n_________________________ test_environment_error_case_109 _________________________\ntests/test_environment_error_109.py:39: in test_environment_error_case_109\n    KeyError: 'AWS_SECRET_ACCESS_KEY'\nos.environ['AWS_SECRET_ACCESS_KEY']\n========================= 1 failed in 1.14s =========================",
+      "ground_truth_category": "environment_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated environment_error variant 4"
+    },
+    {
+      "id": "tc_152",
+      "raw_log": "FAILED tests/test_data_error_152.py::test_data_error_case_152 - FileNotFoundError: No such file or directory: 'fixtures/schema.json'\n============================= FAILURES ==============================\n_________________________ test_data_error_case_152 _________________________\ntests/test_data_error_152.py:42: in test_data_error_case_152\n    FileNotFoundError: No such file or directory: 'fixtures/schema.json'\n========================= 1 failed in 1.57s =========================",
+      "ground_truth_category": "data_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated data_error variant 2"
+    },
+    {
+      "id": "tc_023",
+      "raw_log": "FAILED tests/test_assertion_error_023.py::test_assertion_error_case_23 - AssertionError: assert len(items) == {n}\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_23 _________________________\ntests/test_assertion_error_023.py:33: in test_assertion_error_case_23\n    assert len(items) == 24\nE   AssertionError: assert 0 == 24\n========================= 1 failed in 0.28s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated assertion_error variant 23"
+    },
+    {
+      "id": "tc_140",
+      "raw_log": "FAILED tests/test_network_error_140.py::test_network_error_case_140 - SSLError: certificate verify failed: unable to get local issuer certificate\n============================= FAILURES ==============================\n_________________________ test_network_error_case_140 _________________________\ntests/test_network_error_140.py:30: in test_network_error_case_140\n    SSLError: certificate verify failed\n========================= 1 failed in 1.45s =========================",
+      "ground_truth_category": "network_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated network_error variant 10"
+    },
+    {
+      "id": "tc_174",
+      "raw_log": "FAILED tests/test_flaky_174.py::test_flaky_case_174 - AssertionError: order-dependent test failure\n============================= FAILURES ==============================\n_________________________ test_flaky_case_174 _________________________\ntests/test_flaky_174.py:24: in test_flaky_case_174\n    assert items[0] == 'first'\nE   AssertionError: race condition in ordering\n========================= 1 failed in 1.79s =========================",
+      "ground_truth_category": "flaky",
+      "ground_truth_is_flaky": true,
+      "difficulty": "medium",
+      "notes": "Auto-generated flaky variant 9"
+    },
+    {
+      "id": "tc_027",
+      "raw_log": "FAILED tests/test_assertion_error_027.py::test_assertion_error_case_27 - AssertionError: assert output.startswith('Hello')\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_27 _________________________\ntests/test_assertion_error_027.py:37: in test_assertion_error_case_27\n    assert output.startswith('Hello')\nE   AssertionError: assert False\n========================= 1 failed in 0.32s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated assertion_error variant 27"
+    },
+    {
+      "id": "tc_189",
+      "raw_log": "FAILED tests/test_unknown_189.py::test_unknown_case_189 - MemoryError: \n============================= FAILURES ==============================\n_________________________ test_unknown_case_189 _________________________\ntests/test_unknown_189.py:39: in test_unknown_case_189\n    MemoryError\nfailed to allocate memory\n========================= 1 failed in 1.94s =========================",
+      "ground_truth_category": "unknown",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated unknown variant 9"
+    },
+    {
+      "id": "tc_036",
+      "raw_log": "FAILED tests/test_assertion_error_036.py::test_assertion_error_case_36 - AssertionError: assert price > 0\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_36 _________________________\ntests/test_assertion_error_036.py:46: in test_assertion_error_case_36\n    assert price > 0\nE   AssertionError: assert -1 > 0\n========================= 1 failed in 0.41s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated assertion_error variant 36"
+    },
+    {
+      "id": "tc_058",
+      "raw_log": "FAILED tests/test_import_error_058.py::test_import_error_case_58 - ModuleNotFoundError: No module named 'redis'\n============================= FAILURES ==============================\n_________________________ test_import_error_case_58 _________________________\ntests/test_import_error_058.py:28: in test_import_error_case_58\n    ModuleNotFoundError: No module named 'redis'\n========================= 1 failed in 0.63s =========================",
+      "ground_truth_category": "import_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated import_error variant 8"
+    },
+    {
+      "id": "tc_063",
+      "raw_log": "FAILED tests/test_import_error_063.py::test_import_error_case_63 - ImportError: cannot import name 'field_validator' from 'pydantic'\n============================= FAILURES ==============================\n_________________________ test_import_error_case_63 _________________________\ntests/test_import_error_063.py:33: in test_import_error_case_63\n    ImportError: cannot import name 'field_validator'\n========================= 1 failed in 0.68s =========================",
+      "ground_truth_category": "import_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated import_error variant 13"
+    },
+    {
+      "id": "tc_071",
+      "raw_log": "FAILED tests/test_fixture_error_071.py::test_fixture_error_case_71 - FixtureError: fixture 'db_session' not found\n============================= FAILURES ==============================\n_________________________ test_fixture_error_case_71 _________________________\ntests/test_fixture_error_071.py:41: in test_fixture_error_case_71\n    fixture 'db_session' not found\navailable fixtures: tmp_path, capsys\n========================= 1 failed in 0.76s =========================",
+      "ground_truth_category": "fixture_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated fixture_error variant 1"
+    },
+    {
+      "id": "tc_190",
+      "raw_log": "FAILED tests/test_unknown_190.py::test_unknown_case_190 - SystemExit: 1\n============================= FAILURES ==============================\n_________________________ test_unknown_case_190 _________________________\ntests/test_unknown_190.py:40: in test_unknown_case_190\n    SystemExit: 1\n========================= 1 failed in 1.95s =========================",
+      "ground_truth_category": "unknown",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated unknown variant 10"
+    },
+    {
+      "id": "tc_007",
+      "raw_log": "FAILED tests/test_assertion_error_007.py::test_assertion_error_case_7 - AssertionError: assert output.startswith('Hello')\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_7 _________________________\ntests/test_assertion_error_007.py:17: in test_assertion_error_case_7\n    assert output.startswith('Hello')\nE   AssertionError: assert False\n========================= 1 failed in 0.12s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "easy",
+      "notes": "Auto-generated assertion_error variant 7"
+    },
+    {
+      "id": "tc_029",
+      "raw_log": "FAILED tests/test_assertion_error_029.py::test_assertion_error_case_29 - AssertionError: assert sorted(a) == sorted(b)\n============================= FAILURES ==============================\n_________________________ test_assertion_error_case_29 _________________________\ntests/test_assertion_error_029.py:39: in test_assertion_error_case_29\n    assert sorted(a) == sorted(b)\nE   AssertionError: lists differ\n========================= 1 failed in 0.34s =========================",
+      "ground_truth_category": "assertion_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "medium",
+      "notes": "Auto-generated assertion_error variant 29"
+    },
+    {
+      "id": "tc_164",
+      "raw_log": "FAILED tests/test_data_error_164.py::test_data_error_case_164 - FileNotFoundError: No such file or directory: 'fixtures/schema.json'\n============================= FAILURES ==============================\n_________________________ test_data_error_case_164 _________________________\ntests/test_data_error_164.py:14: in test_data_error_case_164\n    FileNotFoundError: No such file or directory: 'fixtures/schema.json'\n========================= 1 failed in 1.69s =========================",
+      "ground_truth_category": "data_error",
+      "ground_truth_is_flaky": false,
+      "difficulty": "hard",
+      "notes": "Auto-generated data_error variant 14"
+    }
+  ]
+}
