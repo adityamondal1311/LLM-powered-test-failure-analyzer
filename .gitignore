@@ -34,5 +34,12 @@ coverage.xml
 .DS_Store
 Thumbs.db
 
+# Logs
+*.log
+logs/
+
+# Text files (may contain secrets)
+*.txt
+
 # Project specific
 analyzer.db
