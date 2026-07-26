@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from collections import defaultdict
 
-from analyzer.models.eval import CategoryMetrics, CaseResult, EvalReport
+from analyzer.models.eval import CaseResult, CategoryMetrics, EvalReport
 from analyzer.models.pipeline import FailureCategory
 
 

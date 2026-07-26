@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import pytest
-import pytest_asyncio
 
 from analyzer.models.pipeline import (
     FailureCategory,
@@ -15,7 +14,6 @@ from analyzer.models.pipeline import (
 )
 from analyzer.pipeline.storage import (
     get_aggregate_stats,
-    init_db,
     query_by_category,
     store_batch,
     store_result,

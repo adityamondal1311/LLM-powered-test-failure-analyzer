@@ -1,8 +1,7 @@
 from __future__ import annotations
 
-from contextlib import asynccontextmanager
 from collections.abc import AsyncGenerator
-from typing import Any
+from contextlib import asynccontextmanager
 
 import aiosqlite
 from fastapi import FastAPI
@@ -29,7 +28,10 @@ def create_app() -> FastAPI:
     app = FastAPI(
         title="LLM-Powered Test Failure Analyzer",
         version="0.1.0",
-        description="Classifies pytest failures via Claude API with structured output and fallback heuristics.",
+        description=(
+            "Classifies pytest failures via Claude API with structured output and fallback "
+            "heuristics."
+        ),
         lifespan=lifespan,
     )
     app.add_middleware(TimingMiddleware)

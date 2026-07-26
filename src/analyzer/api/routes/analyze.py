@@ -13,8 +13,8 @@ from analyzer.models.api import (
     BatchAnalyzeRequest,
     BatchAnalyzeResponse,
 )
-from analyzer.pipeline.ingestion import ingest_batch, ingest_log
 from analyzer.pipeline.inference import run_inference, run_inference_batch
+from analyzer.pipeline.ingestion import ingest_batch, ingest_log
 from analyzer.pipeline.scoring import score_result
 from analyzer.pipeline.storage import store_batch, store_result
 from analyzer.pipeline.validation import validate_result
@@ -22,7 +22,7 @@ from analyzer.pipeline.validation import validate_result
 router = APIRouter(tags=["analyze"])
 
 
-def _to_response(record_id: str, scored: object) -> AnalyzeResponse:  # type: ignore[type-arg]
+def _to_response(record_id: str, scored: object) -> AnalyzeResponse:
     from analyzer.models.pipeline import ScoredResult
 
     assert isinstance(scored, ScoredResult)

@@ -5,8 +5,8 @@ from __future__ import annotations
 import pytest
 
 from analyzer.models.pipeline import FailureCategory, FallbackSource
-from analyzer.pipeline.ingestion import ingest_log
 from analyzer.pipeline.inference import run_inference
+from analyzer.pipeline.ingestion import ingest_log
 from analyzer.pipeline.scoring import score_result
 from analyzer.pipeline.storage import store_result
 from analyzer.pipeline.validation import validate_result
@@ -16,8 +16,7 @@ from tests.fixtures.sample_logs import (
     NETWORK_ERROR_LOG,
     TIMEOUT_LOG,
 )
-from tests.fixtures.sample_responses import LLM_ASSERTION, SAMPLE_USAGE
-
+from tests.fixtures.sample_responses import SAMPLE_USAGE
 
 # ---------------------------------------------------------------------------
 # Full pipeline happy path
@@ -62,9 +61,10 @@ async def test_full_pipeline_import_error_log(
     mock_llm_client: object,
     tmp_db: object,
 ) -> None:
-    from tests.fixtures.sample_responses import LLM_IMPORT
     from unittest.mock import AsyncMock, MagicMock
+
     from analyzer.llm.client import LLMClient
+    from tests.fixtures.sample_responses import LLM_IMPORT
 
     client = MagicMock(spec=LLMClient)
     client._model = "claude-sonnet-4-6"
@@ -147,8 +147,9 @@ async def test_pipeline_multiple_logs_stored(
 
 @pytest.mark.asyncio
 async def test_low_confidence_does_not_pass_gate(mock_llm_client: object) -> None:
-    from analyzer.models.pipeline import RootCauseHypothesis
     from unittest.mock import AsyncMock
+
+    from analyzer.models.pipeline import RootCauseHypothesis
 
     low_conf = RootCauseHypothesis(
         category=FailureCategory.UNKNOWN,

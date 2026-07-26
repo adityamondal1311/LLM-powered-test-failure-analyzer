@@ -44,9 +44,9 @@ def _get_db_path(db: aiosqlite.Connection) -> str:
         pass
     try:
         # aiosqlite >= 0.18: path is a free variable in the connector closure
-        freevars = db._connector.__code__.co_freevars  # type: ignore[attr-defined]
+        freevars = db._connector.__code__.co_freevars
         idx = freevars.index("database")
-        cell = db._connector.__closure__[idx]  # type: ignore[attr-defined]
+        cell = db._connector.__closure__[idx]  # type: ignore[index]
         return str(cell.cell_contents)
     except (AttributeError, ValueError, IndexError, TypeError):
         return ""
@@ -130,6 +130,7 @@ async def get_aggregate_stats(db: aiosqlite.Connection) -> dict:  # type: ignore
     ) as cursor:
         row = await cursor.fetchone()
 
+    assert row is not None  # COUNT(*) always returns exactly one row
     total = row[0] or 0
     avg_conf = row[1] or 0.0
     fallback_count = row[2] or 0

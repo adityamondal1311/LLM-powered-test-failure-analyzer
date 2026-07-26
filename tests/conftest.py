@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import asyncio
 from collections.abc import AsyncGenerator, Generator
 from typing import Any
 from unittest.mock import AsyncMock, MagicMock
@@ -17,7 +16,6 @@ from analyzer.api.app import create_app
 from analyzer.config import Settings
 from analyzer.llm.client import LLMClient
 from analyzer.models.pipeline import (
-    FailureCategory,
     FallbackSource,
     InferenceResult,
     ParsedFailure,
@@ -27,7 +25,6 @@ from analyzer.models.pipeline import (
 )
 from analyzer.pipeline.storage import init_db
 from tests.fixtures.sample_responses import LLM_ASSERTION, SAMPLE_USAGE
-
 
 # ---------------------------------------------------------------------------
 # Core model fixtures
@@ -54,7 +51,10 @@ def sample_parsed_failure() -> ParsedFailure:
             "E   AssertionError: assert 150.0 == 200.0",
         ],
         duration_ms=230.0,
-        raw_log="FAILED tests/test_payments.py::test_user_balance - AssertionError: assert 150.0 == 200.0",
+        raw_log=(
+            "FAILED tests/test_payments.py::test_user_balance - "
+            "AssertionError: assert 150.0 == 200.0"
+        ),
         token_estimate=42,
     )
 
@@ -135,7 +135,7 @@ def mock_llm_client_timeout() -> LLMClient:
     """LLMClient mock that raises asyncio.TimeoutError."""
     client = MagicMock(spec=LLMClient)
     client._model = "claude-sonnet-4-6"
-    client.classify_failure = AsyncMock(side_effect=asyncio.TimeoutError())
+    client.classify_failure = AsyncMock(side_effect=TimeoutError())
     return client
 
 

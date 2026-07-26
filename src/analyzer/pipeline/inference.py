@@ -45,12 +45,7 @@ async def run_inference(
                 fallback_used = True
                 fallback_source = FallbackSource.HEURISTIC
 
-    except (
-        anthropic.RateLimitError,
-        anthropic.InternalServerError,
-        asyncio.TimeoutError,
-        ValueError,
-    ):
+    except (TimeoutError, anthropic.RateLimitError, anthropic.InternalServerError, ValueError):
         tb_text = "\n".join(failure.traceback_lines)
         hypothesis = classify_by_heuristic(
             failure.error_type, failure.error_message, tb_text

@@ -61,7 +61,7 @@ class LLMClient:
                 await asyncio.sleep(delay)
                 delay = min(delay * 2, 8.0)
                 attempt += 1
-            except asyncio.TimeoutError as exc:
+            except TimeoutError as exc:
                 last_exc = exc
                 attempt += 1  # no sleep on timeout
 
@@ -72,7 +72,7 @@ class LLMClient:
         self, failure: ParsedFailure
     ) -> tuple[RootCauseHypothesis, dict[str, int]]:
         start = time.perf_counter()
-        response = await self._client.messages.create(
+        response = await self._client.messages.create(  # type: ignore[call-overload]
             model=self._model,
             max_tokens=512,
             # Frozen system prompt — eligible for prompt caching

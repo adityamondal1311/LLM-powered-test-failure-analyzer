@@ -13,7 +13,6 @@ from analyzer.models.pipeline import (
 )
 from analyzer.pipeline.scoring import _compute_rank_score, _is_actionable, score_result
 
-
 # ---------------------------------------------------------------------------
 # _is_actionable
 # ---------------------------------------------------------------------------

@@ -105,14 +105,7 @@ SAMPLE_LOGS: dict[str, str] = {
 
 MINIMAL_LOG = "FAILED tests/test_foo.py::test_bar - AssertionError: assert 1 == 2"
 
-VERY_LONG_LOG = (
-    "FAILED tests/test_big.py::test_heavy - AssertionError: heavy computation failed\n"
-    + "_ test_heavy _\n"
-    + ("  File 'src/heavy.py', line {i}, in compute\n    x = x * x\n".format(i=i) for i in range(500)).__class__.__name__
-    # Build a traceback with 500 lines to exercise token truncation
-)
-
-# Build a proper long log for truncation tests
+# Build a long log (500-line traceback) to exercise token-budget truncation
 _long_traceback_lines = ["_ test_heavy _"]
 for i in range(500):
     _long_traceback_lines.append(f"  File 'src/heavy.py', line {i}, in compute")

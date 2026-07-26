@@ -15,12 +15,10 @@ from analyzer.models.pipeline import (
 )
 from analyzer.pipeline.inference import run_inference, run_inference_batch
 from tests.fixtures.sample_responses import (
-    HEURISTIC_ASSERTION,
-    LOW_CONFIDENCE,
     LLM_ASSERTION,
+    LOW_CONFIDENCE,
     SAMPLE_USAGE,
 )
-
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -116,7 +114,7 @@ async def test_fallback_on_internal_server_error(sample_parsed_failure: object) 
 
 @pytest.mark.asyncio
 async def test_fallback_on_timeout(sample_parsed_failure: object) -> None:
-    client = _make_failing_client(asyncio.TimeoutError())
+    client = _make_failing_client(TimeoutError())
     result = await run_inference(sample_parsed_failure, client)  # type: ignore[arg-type]
     assert result.fallback_used is True
     assert result.fallback_source == FallbackSource.HEURISTIC

@@ -1,11 +1,9 @@
 from __future__ import annotations
 
-import asyncio
 import uuid
 from typing import Any
 
 from fastapi import APIRouter, BackgroundTasks, HTTPException, Request
-from fastapi.responses import JSONResponse
 
 from analyzer.config import get_settings
 from analyzer.eval.runner import run_eval

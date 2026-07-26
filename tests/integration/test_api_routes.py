@@ -12,13 +12,11 @@ import pytest_asyncio
 from httpx import ASGITransport, AsyncClient
 
 from analyzer.api.app import create_app
-from analyzer.config import Settings
 from analyzer.llm.client import LLMClient
-from analyzer.models.pipeline import FailureCategory, FallbackSource, RootCauseHypothesis
+from analyzer.models.pipeline import RootCauseHypothesis
 from analyzer.pipeline.storage import init_db
 from tests.fixtures.sample_logs import ASSERTION_ERROR_LOG, IMPORT_ERROR_LOG
 from tests.fixtures.sample_responses import LLM_ASSERTION, SAMPLE_USAGE
-
 
 # ---------------------------------------------------------------------------
 # Fixtures
