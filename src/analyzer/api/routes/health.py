@@ -34,6 +34,6 @@ async def metrics(request: Request) -> MetricsResponse:
         total_analyzed=stats["total"],
         category_distribution=stats["category_distribution"],
         avg_confidence=stats["avg_confidence"],
-        cache_hit_rate=0.0,  # populated by instrumentation layer in production
+        cache_hit_rate=stats["cache_hit_rate"],
         fallback_rate=stats["fallback_rate"],
     )

@@ -30,6 +30,7 @@ def _make_scored(
     fix_hint: str = "Check the assertion and expected values now",
     fallback_used: bool = False,
     fallback_source: FallbackSource = FallbackSource.LLM,
+    cache_hit_tokens: int = 80,
 ) -> ScoredResult:
     h = RootCauseHypothesis(
         category=category,
@@ -46,7 +47,7 @@ def _make_scored(
         latency_ms=300.0,
         input_tokens=100,
         output_tokens=40,
-        cache_hit_tokens=80,
+        cache_hit_tokens=cache_hit_tokens,
         fallback_used=fallback_used,
         fallback_source=fallback_source,
     )
@@ -176,6 +177,28 @@ async def test_get_aggregate_stats_empty_db(tmp_db: object) -> None:
     assert stats["total"] == 0
     assert stats["avg_confidence"] == 0.0
     assert stats["fallback_rate"] == 0.0
+    assert stats["cache_hit_rate"] == 0.0
+
+
+@pytest.mark.asyncio
+async def test_get_aggregate_stats_cache_hit_rate(
+    tmp_db: object, sample_parsed_failure: object
+) -> None:
+    await store_result(
+        _make_scored(sample_parsed_failure, cache_hit_tokens=120),
+        tmp_db,  # type: ignore[arg-type]
+    )
+    await store_result(
+        _make_scored(sample_parsed_failure, cache_hit_tokens=0),
+        tmp_db,  # type: ignore[arg-type]
+    )
+    await store_result(
+        _make_scored(sample_parsed_failure, cache_hit_tokens=0),
+        tmp_db,  # type: ignore[arg-type]
+    )
+    stats = await get_aggregate_stats(tmp_db)  # type: ignore[arg-type]
+    assert stats["total"] == 3
+    assert stats["cache_hit_rate"] == pytest.approx(1 / 3, abs=1e-4)
 
 
 @pytest.mark.asyncio

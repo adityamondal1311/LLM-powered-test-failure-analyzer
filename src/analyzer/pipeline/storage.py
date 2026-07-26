@@ -139,10 +139,21 @@ async def get_aggregate_stats(db: aiosqlite.Connection) -> dict:  # type: ignore
     ) as cursor:
         cat_rows = await cursor.fetchall()
 
+    async with db.execute("SELECT payload_json FROM analysis_results") as cursor:
+        payload_rows = await cursor.fetchall()
+
+    cache_hit_count = 0
+    for (payload,) in payload_rows:
+        record = json.loads(payload)
+        cache_hit_tokens = record["validation"]["inference"]["cache_hit_tokens"]
+        if cache_hit_tokens > 0:
+            cache_hit_count += 1
+
     return {
         "total": total,
         "avg_confidence": round(avg_conf, 4),
         "fallback_rate": round(fallback_count / total, 4) if total else 0.0,
+        "cache_hit_rate": round(cache_hit_count / total, 4) if total else 0.0,
         "category_distribution": {r[0]: r[1] for r in cat_rows},
     }
 
